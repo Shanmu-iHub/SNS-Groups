@@ -2,7 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <script>
+    // SNS Groups - Smart Router (Desktop to Mobile)
+    if (window.innerWidth < 1024 && !window.location.search.includes('v=desktop')) {
+      window.location.replace("mobile.html" + window.location.search);
+    }
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SNS Institutions | Autonomous Colleges in Coimbatore</title>
   <meta name="description"

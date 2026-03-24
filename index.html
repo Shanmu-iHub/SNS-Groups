@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNS Institutions | Loading...</title>
+    <link rel="icon" type="image/png" href="https://www.snsgroups.com/sns.png">
+    <script>
+        /**
+         * Smart Router for SNS Groups
+         * Redirects users to Desktop or Mobile version based on screen width.
+         */
+        function snsRouter() {
+            const width = window.innerWidth;
+            const isMobile = width < 1024; // Tailwind 'lg' breakpoint
+            
+            if (isMobile) {
+                window.location.replace("mobile.html");
+            } else {
+                window.location.replace("Desktop.html");
+            }
+        }
+        
+        // Execute immediately
+        snsRouter();
+        
+        // Fallback for slower loads
+        window.addEventListener('load', snsRouter);
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f8fafc;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #1e40af;
+        }
+        .loader {
+            width: 48px;
+            height: 48px;
+            border: 5px solid #1e40af;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+            margin-top: 20px;
+        }
+        @keyframes rotation {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        img {
+            height: 100px;
+            width: auto;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://www.snsgroups.com/sns.png" alt="SNS Institutions">
+    <p>Redirecting to the optimized version for your device...</p>
+    <span class="loader"></span>
+</body>
+</html>
