@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mandatory Disclosure | SNS Institutions</title>
+  <meta name="description"
+    content="SNS Institutions is a premier Autonomous Colleges in Coimbatore focusing on Design Thinking, AI-powered learning, and holistic student development.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://www.snsgroups.com/sns.png">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          maxWidth: {
+            'xl': '45rem',
+            '2xl': '52.5rem',
+            '4xl': '70rem',
+            '7xl': '100rem',
+          },
+          colors: {
+            sns: {
+              primary: '#1e40af',
+              secondary: '#7c3aed',
+              accent: '#f59e0b',
+              dark: '#0f172a',
+              light: '#f8fafc'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    a,
+    a:hover {
+      text-decoration: none !important;
+    }
+
+    .scroll-animate {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease-out;
+    }
+
+    .scroll-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+      color: white;
+    }
+
+    /* Resilient Submenu Hover */
+    .group:hover>.nav-dropdown-content {
+      opacity: 1 !important;
+      visibility: visible !important;
+      display: block !important;
+    }
+
+    section[id] {
+      scroll-margin-top: 100px;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-white text-gray-800">
+
+  <!-- Announcement Banner -->
+  <div id="announcementBanner"
+    class="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <div class="flex items-center gap-3 flex-1 justify-center">
+        <span class="animate-pulse">🚀</span>
+        <span class="text-white text-sm font-medium">
+          <span class="hidden sm:inline">Upcoming:</span> <strong>Agentic AI Bootcamp</strong> - Build the
+          Future of AI!
+        </span>
+        <a href="https://av.snsgroups.com" target="_blank"
+          class="px-3 py-1 bg-white text-purple-700 rounded-full text-xs font-bold hover:bg-gray-100 transition-all">
+          Register Now <i class="fas fa-arrow-right ml-1"></i>
+        </a>
+      </div>
+      <button onclick="closeBanner()" class="text-white/80 hover:text-white p-1 ml-2">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="mainNav"
+    class="fixed top-8 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <a href="Desktop.html" class="flex items-center gap-3 group">
+          <img src="https://www.snsgroups.com/sns.png" alt="SNS Groups Logo"
+            class="h-20 w-auto transition-transform duration-300 group-hover:scale-105">
+          <div class="flex flex-col">
+            <span class="font-bold text-3xl text-gray-900 tracking-tight leading-none">SNS
+              Institutions</span>
+            <span class="text-[12px] text-blue-600 font-bold tracking-[0.2em] uppercase mt-1">Design
+              Thinkers</span>
+          </div>
+        </a>
+        <div class="hidden lg:flex items-center gap-4">
+          <!-- Academics Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-gray-600 hover:text-blue-600 transition-colors text-base font-bold flex items-center gap-1">
+              Academics <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div
+              class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 nav-dropdown-content">
+              <div class="p-2">
+                <a href="Desktop.html#programs"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-graduation-cap mr-2 text-blue-600"></i>Programs Offered</a>
+                <a href="Desktop.html#placements"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-briefcase mr-2 text-green-600"></i>Placements</a>
+                <a href="Desktop.html#certifications"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-certificate mr-2 text-indigo-600"></i>Global Levels</a>
+                <a href="Desktop.html#3c-model"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-circle-notch mr-2 text-purple-600"></i>3C Competency</a>
+                <a href="Desktop.html#pillars"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-columns mr-2 text-amber-600"></i>Five Pillars</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Infrastructure Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-gray-600 hover:text-blue-600 transition-colors text-base font-bold flex items-center gap-1">
+              Infrastructure <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div
+              class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 nav-dropdown-content">
+              <div class="p-2">
+                <a href="Desktop.html#institutions"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-building mr-2 text-blue-600"></i>Our Campuses</a>
+                <a href="https://snsspine.in" target="_blank"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-dumbbell mr-2 text-purple-600"></i>SPINE Facilities</a>
+                <a href="Desktop.html#ecosystem"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-bus mr-2 text-green-600"></i>Transport & Hostel</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Beyond Academics Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-gray-600 hover:text-blue-600 transition-colors text-base font-bold flex items-center gap-1">
+              Beyond Academics <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div
+              class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 nav-dropdown-content">
+              <div class="p-2">
+                <a href="https://snsspine.in" target="_blank"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-futbol mr-2 text-green-600"></i>Sports & Clubs</a>
+                <a href="https://snsihub.ai" target="_blank"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-rocket mr-2 text-pink-600"></i>Innovation Hub</a>
+                <a href="Desktop.html#events"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-calendar-alt mr-2 text-amber-600"></i>Events & Celebrations</a>
+                <a href="Desktop.html#alumni-stories"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-trophy mr-2 text-blue-600"></i>Success Stories</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meet Us Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-gray-600 hover:text-blue-600 transition-colors text-base font-bold flex items-center gap-1">
+              Meet Us <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div
+              class="absolute top-full right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 nav-dropdown-content">
+              <div class="p-2">
+                <a href="Desktop.html#about"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-info-circle mr-2 text-blue-600"></i>About Us</a>
+                <a href="Desktop.html#leaders"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-users mr-2 text-purple-600"></i>Leadership</a>
+                <a href="Desktop.html#ecosystem"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-th-large mr-2 text-pink-600"></i>SNS Ecosystem</a>
+                <a href="https://snsalumni.in" target="_blank"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-user-friends mr-2 text-cyan-600"></i>Alumni Network</a>
+                <a href="https://iipc.snsgroups.com" target="_blank"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-handshake mr-2 text-indigo-600"></i>Industry Partners</a>
+                <div class="border-t border-gray-100 my-1"></div>
+                <a href="Desktop.html#contact"
+                  class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                    class="fas fa-phone mr-2 text-green-600"></i>Contact Us</a>
+                <a href="mandatory-disclosure.html"
+                  class="block px-4 py-2 text-base font-semibold text-amber-600 bg-blue-50 rounded-lg"><i
+                    class="fas fa-file-shield mr-2"></i>Mandatory Disclosure</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100">
+          <i class="fas fa-bars text-gray-600"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t">
+      <div class="px-4 py-3 space-y-3">
+        <a href="Desktop.html#about" class="block text-gray-600 hover:text-blue-600 py-2">About</a>
+        <a href="Desktop.html#programs" class="block text-gray-600 hover:text-blue-600 py-2">Programs</a>
+        <a href="Desktop.html#placements" class="block text-gray-600 hover:text-blue-600 py-2">Placements</a>
+        <a href="Desktop.html#certifications" class="block text-gray-600 hover:text-blue-600 py-2">Global Levels</a>
+        <a href="mandatory-disclosure.html" class="block text-blue-600 font-bold py-2">Mandatory Disclosure</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header & Breadcrumb -->
+  <section class="pt-[140px] pb-16 bg-gradient-to-b from-blue-50/50 via-white to-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumb -->
+      <nav class="flex justify-start mb-8" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 text-sm font-medium">
+          <li>
+            <a href="Desktop.html" class="text-gray-500 hover:text-blue-600 transition-colors flex items-center gap-1.5">
+              <i class="fas fa-home text-xs"></i> Home
+            </a>
+          </li>
+          <li>
+            <i class="fas fa-chevron-right text-[10px] text-gray-400"></i>
+          </li>
+          <li>
+            <span class="text-blue-600">Mandatory Disclosure</span>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Content Header -->
+      <div class="text-center scroll-animate visible">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-amber-100/80 text-amber-700 rounded-full text-xs font-bold mb-6 ring-1 ring-amber-200 ring-offset-1">
+          <i class="fas fa-shield-halved text-[10px]"></i> Transparency & Compliance
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight" style="color: #1e40af; line-height: 1.2;">
+          Compliance & <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-600">Mandatory Disclosure</span>
+        </h1>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed font-medium">
+          Official documents, legal information, and mandatory public disclosures as per CBSE / AICTE norms.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-24 bg-gray-50 pb-[100px]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-3 mb-12 scroll-animate visible">
+        <button data-tab="k12" class="tab-btn px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 bg-gray-200 hover:bg-gray-300">K-12</button>
+        <button data-tab="engineering" class="tab-btn active px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Engineering & Tech</button>
+        <button data-tab="arts" class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Arts & Science</button>
+        <button data-tab="paramedical" class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Paramedical</button>
+        <button data-tab="education" class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Education</button>
+      </div>
+
+
+      <!-- Content -->
+      <div id="m-general-tab" class="m-tab-content scroll-animate visible mb-16">
+        <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4">A. General Information</h3>
+        <div class="overflow-x-auto rounded-2xl border border-orange-200 shadow-lg bg-white">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-gradient-to-r from-orange-50 to-amber-50">
+                <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-orange-200 w-20">SL NO.</th>
+                <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-orange-200">INFORMATION</th>
+                <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-orange-200">DETAILS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-orange-50/30 transition-colors bg-white">
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
+                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Name of the School</td>
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">SNS ACADEMY</td>
+              </tr>
+              <tr class="hover:bg-orange-50/30 transition-colors bg-gray-50/50">
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">2</td>
+                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Affiliation No.</td>
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">1930610</td>
+              </tr>
+              <tr class="hover:bg-orange-50/30 transition-colors bg-white">
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">3</td>
+                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">School Code</td>
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">55513</td>
+              </tr>
+              <tr class="hover:bg-orange-50/30 transition-colors bg-gray-50/50">
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">4</td>
+                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Complete Address with Pin Code</td>
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">538, Thudiyalur-Saravanampatti Road, Vellakinar Post, Coimbatore - 641029, Tamil Nadu</td>
+              </tr>
+              <tr class="hover:bg-orange-50/30 transition-colors bg-white">
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">5</td>
+                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Principal Name</td>
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">Sri Vidhya Prince</td>
+              </tr>
+              <tr class="hover:bg-orange-50/30 transition-colors bg-gray-50/50">
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">6</td>
+                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Principal Qualification</td>
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">M.Sc, M.Ed, M.Phil</td>
+              </tr>
+              <tr class="hover:bg-orange-50/30 transition-colors bg-white">
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">7</td>
+                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">School Email ID</td>
+                <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="mailto:office@snsacademy.org" class="text-orange-600 font-medium transition-colors">office@snsacademy.org</a></td>
+              </tr>
+              <tr class="hover:bg-orange-50/30 transition-colors bg-gray-50/50">
+                <td class="px-6 py-4 text-sm text-gray-700 font-medium">8</td>
+                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Contact Details</td>
+                <td class="px-6 py-4 text-sm"><a href="tel:+919629937861" class="text-orange-600 font-medium transition-colors">+91 96299 37861</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="m-documents-tab" class="m-tab-content scroll-animate visible">
+        <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4">B. Documents and Information</h3>
+        <div class="overflow-x-auto rounded-2xl border border-orange-200 shadow-lg bg-white">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-gradient-to-r from-orange-50 to-amber-50">
+                <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-orange-200 w-20">SL NO.</th>
+                <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-orange-200">DOCUMENTS/INFORMATION</th>
+                <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-orange-200 w-40 text-center">LINKS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-orange-50/30 transition-colors bg-white">
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
+                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase">Copies of Affiliation/Upgradation Letter</td>
+                <td class="px-6 py-4 text-sm border-b border-gray-100 text-center"><a href="#" class="text-orange-600 font-bold">View</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-6 group">
+            <div class="bg-white rounded-lg p-2 transition-transform duration-300 group-hover:scale-105">
+              <img src="https://www.snsgroups.com/sns.png" alt="SNS Groups Logo" class="h-20 w-auto">
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-3xl text-white tracking-tight leading-none">SNS Groups</span>
+              <span class="text-[12px] text-blue-400 font-bold tracking-[0.2em] uppercase mt-1">Design
+                Thinkers</span>
+            </div>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            Sri SNS Charitable Trust - Serving society since 1997 in Education, Technology, and Social
+            Welfare.
+          </p>
+          <div class="flex gap-3">
+            <a href="https://www.facebook.com/snsinstitutions" target="_blank"
+              class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-facebook-f text-white"></i>
+            </a>
+            <a href="https://www.instagram.com/snsinstitutions/" target="_blank"
+              class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-pink-600 transition-colors">
+              <i class="fab fa-instagram text-white"></i>
+            </a>
+            <a href="https://x.com/snsinstitutions" target="_blank"
+              class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-black transition-colors">
+              <svg class="w-4 h-4 text-white fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.494h2.039L6.486 3.24H4.298l13.311 17.407z">
+                </path>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/school/snsinstitutions/" target="_blank"
+              class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-blue-700 transition-colors">
+              <i class="fab fa-linkedin-in text-white"></i>
+            </a>
+            <a href="https://www.youtube.com/@snsinstitutions" target="_blank"
+              class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-red-600 transition-colors">
+              <i class="fab fa-youtube text-white"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold mb-4" style="color: #1e40af; font-weight: 700; max-width: 100%;">Quick Links
+          </h3>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="Desktop.html#about" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="Desktop.html#programs" class="hover:text-white transition-colors">Programs</a></li>
+            <li><a href="Desktop.html#placements" class="hover:text-white transition-colors">Placements</a></li>
+            <li><a href="https://online.flippingbook.com/view/850776850/" target="_blank"
+                class="hover:text-white transition-colors"><i class="fas fa-book mr-1"></i>Brochure</a>
+            </li>
+            <li><a href="https://online.flippingbook.com/view/850725668/" target="_blank"
+                class="hover:text-white transition-colors"><i class="fas fa-newspaper mr-1"></i>Newsletter</a></li>
+            <li><a href="mandatory-disclosure.html" class="hover:text-white transition-colors"><i
+                  class="fas fa-file-shield mr-1"></i>Mandatory Disclosure</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold mb-4" style="color: #10b981; font-weight: 700; max-width: 100%;">Ecosystem</h3>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="https://av.snsgroups.com" target="_blank"
+                class="hover:text-white transition-colors text-amber-400"><i class="fas fa-robot mr-1"></i>Agentic AI
+                Bootcamp</a></li>
+            <li><a href="https://snsihub.ai" target="_blank" class="hover:text-white transition-colors">SNS
+                iHub</a>
+            </li>
+            <li><a href="https://snsspine.in" target="_blank" class="hover:text-white transition-colors">SPINE</a></li>
+            <li><a href="https://snscourseware.org" target="_blank" class="hover:text-white transition-colors">Learning
+                Community</a></li>
+            <li><a href="https://snsalumni.in" target="_blank" class="hover:text-white transition-colors">Alumni
+                Network</a></li>
+          </ul>
+        </div>
+
+        <div id="contact">
+          <h3 class="font-bold mb-4" style="color: #f59e0b; font-weight: 700; max-width: 100%;">Contact</h3>
+          <ul class="space-y-3 text-gray-400 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt mt-1 text-blue-400"></i>
+              <span>536, Thudiyalur - Saravanampatti Road, Coimbatore - 641 029, Tamil Nadu</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-green-400"></i>
+              <span>95664 23456</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-headset text-amber-400"></i>
+              <span>Admissions: 90036 55855</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-pink-400"></i>
+              <span>director.iipc.sns@gmail.com</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-briefcase text-purple-400"></i>
+              <span>For Careers: job@snsgroups.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-500 text-sm">© 2026 SNS Groups. All rights reserved.</p>
+        <p class="text-gray-500 text-sm mt-2 md:mt-0">
+          <i class="fas fa-heart text-red-500"></i> Built with Design Thinking
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+
+    // Program Category Tabs
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active', 'bg-blue-600', 'text-white'));
+        tabBtns.forEach(b => b.classList.add('bg-gray-200', 'text-gray-700'));
+        btn.classList.add('active');
+        btn.classList.remove('bg-gray-200', 'text-gray-700');
+      });
+    });
+
+    // Announcement Banner
+    function closeBanner() {
+      const banner = document.getElementById('announcementBanner');
+      const nav = document.getElementById('mainNav');
+      banner.style.display = 'none';
+      nav.style.top = '0';
+    }
+  </script>
+</body>
+
+</html>
