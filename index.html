@@ -7021,15 +7021,6 @@
       const activeContent = document.getElementById('para-' + subKey);
       if (activeContent) activeContent.style.display = 'block';
     }
-);
-
-        // Toggle Content
-        document.querySelectorAll('.para-content').forEach(content => {
-            content.style.display = 'none';
-        });
-        const active = document.getElementById('para-' + subKey);
-        if (active) active.style.display = 'block';
-    }
 
   </script>
 
@@ -7967,10 +7958,6 @@
             document.querySelectorAll('.m-tab-content').forEach(c => c.style.display = 'none');
             const target = document.getElementById('tab-' + tabKey);
             if (target) target.style.display = 'block';
-          }
-);
-            document.querySelectorAll('.m-tab-content').forEach(c => c.style.display = 'none');
-            document.getElementById('tab-' + tabKey).style.display = 'block';
           }
           function closeBanner() {
             document.getElementById('announcementBanner').style.display = 'none';
