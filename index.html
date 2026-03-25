@@ -2995,8 +2995,10 @@
           </div>
 
           <div class="text-center">
-            <a href="https://iipc.snsgroups.com" target="_blank"
-              class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-all">
+            <a href="https://iipc.snsgroups.com" target="_blank" class="inline-flex items-center gap-2 
+              para-sub-btn active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-blue-700 text-white
+              shadow-md"  text-white px-6 py-3 rounded-xl font-medium
+              hover:bg-blue-700 transition-all">
               View Complete Placement Report <i class="fas fa-external-link-alt"></i>
             </a>
           </div>
@@ -3056,7 +3058,9 @@
 
         <div class="grid md:grid-cols-3 gap-8 mb-16">
           <div class="scroll-animate p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200">
-            <div class="w-14 h-14 rounded-xl bg-blue-600 flex items-center justify-center mb-6">
+            <div class="w-14 h-14 rounded-xl  para-sub-btn active px-4 py-2 rounded-xl text-xs font-bold
+              transition-all bg-blue-700 text-white shadow-md"  flex items-center
+              justify-center mb-6">
               <i class="fas fa-award text-2xl text-white"></i>
             </div>
             <h3 class="text-xl font-bold text-gray-900 mb-3" style="color: #1e40af; font-weight: 600; max-width: 100%;">
@@ -3142,7 +3146,7 @@
               </div>
               <div
                 class="bg-white/50 rounded-lg overflow-hidden border border-blue-200 shadow-sm mx-auto max-w-[140px]">
-                <table class="w-full text-left border-collapse">
+                <table class="disc-table">
                   <thead>
                     <tr class="bg-blue-100/50">
                       <th class="px-2 py-1 text-[10px] font-bold text-blue-900 text-center border-b border-blue-200">
@@ -5326,8 +5330,10 @@
         <div class="scroll-animate mt-12 text-center">
           <p class="text-gray-600 mb-4">Still have questions?</p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="tel:9003655855"
-              class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-all">
+            <a href="tel:9003655855" class="inline-flex items-center gap-2  para-sub-btn active px-4 py-2
+              rounded-xl text-xs font-bold transition-all bg-blue-700 text-white shadow-md"
+               text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700
+              transition-all">
               <i class="fas fa-phone"></i> Call Us: 90036 55855
             </a>
             <a href="https://wa.me/919566423456" target="_blank"
@@ -5433,7 +5439,9 @@
             </p>
             <div class="flex gap-3">
               <a href="https://www.facebook.com/snsinstitutions" target="_blank"
-                class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-blue-600 transition-colors">
+                class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/10  para-sub-btn
+                active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-blue-700 text-white shadow-md"
+                 transition-colors">
                 <i class="fab fa-facebook-f text-white"></i>
               </a>
               <a href="https://www.instagram.com/snsinstitutions/" target="_blank"
@@ -7003,6 +7011,37 @@
 
     window.SNSApp = { navigateToPage, renderRecruiters, renderPortals };
 
+
+    
+    function switchParaTab(subKey) {
+      document.querySelectorAll('.para-sub-btn').forEach(btn => {
+        const isActive = btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(subKey);
+        if (isActive) {
+          btn.style.backgroundColor = '#3b82f6';
+          btn.style.color = 'white';
+          btn.classList.add('active');
+          btn.classList.add('shadow-md');
+        } else {
+          btn.style.backgroundColor = '#eff6ff';
+          btn.style.color = '#1e40af';
+          btn.classList.remove('active');
+          btn.classList.remove('shadow-md');
+        }
+      });
+      document.querySelectorAll('.para-content').forEach(c => c.style.display = 'none');
+      const activeContent = document.getElementById('para-' + subKey);
+      if (activeContent) activeContent.style.display = 'block';
+    }
+);
+
+      // Toggle Content
+      document.querySelectorAll('.para-content').forEach(content => {
+        content.style.display = 'none';
+      });
+      const active = document.getElementById('para-' + subKey);
+      if (active) active.style.display = 'block';
+    }
+
   </script>
 
 
@@ -7198,7 +7237,9 @@
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap justify-center gap-3 mb-12">
               <button onclick="switchDiscTab('k12')"
-                class="disc-tab-btn active px-6 py-3 rounded-full font-bold text-sm bg-blue-600 text-white">K-12</button>
+                class="disc-tab-btn active px-6 py-3 rounded-full font-bold text-sm class=" para-sub-btn active px-4
+                py-2 rounded-xl text-xs font-bold transition-all bg-blue-700 text-white shadow-md"
+                 text-white">K-12</button>
               <button onclick="switchDiscTab('engineering')"
                 class="disc-tab-btn px-6 py-3 rounded-full font-bold text-sm bg-gray-200 text-gray-700">Engineering &
                 Tech</button>
@@ -7213,121 +7254,181 @@
             <div id="m-tabs-container">
 
               <div id="tab-k12" class="m-tab-content scroll-animate" style="">
-                <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4">A. General Information
-                  - SNS ACADEMY</h3>
-                <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
-                  <table class="w-full text-left border-collapse">
+                <h3 class="disc-section-title">A. General Information - SNS ACADEMY</h3>
+                <div class="disc-table-container">
+                  <table class="disc-table">
                     <thead>
-                      <tr class="bg-gradient-to-r from-blue-50 to-indigo-50">
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100 w-20">SL NO.
-                        </th>
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100">INFORMATION
-                        </th>
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100">DETAILS</th>
+                      <tr>
+                        <th>SL NO.</th>
+                        <th>INFORMATION</th>
+                        <th>DETAILS</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="px-6 py-4 border-b">1</td>
-                        <td class="px-6 py-4 font-bold border-b">NAME</td>
-                        <td class="px-6 py-4 border-b">SNS ACADEMY</td>
+                        <td>1</td>
+                        <td>NAME OF THE SCHOOL</td>
+                        <td>SNS ACADEMY</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">2</td>
-                        <td class="px-6 py-4 font-bold border-b">AFFILIATION</td>
-                        <td class="px-6 py-4 border-b">CBSE (1930610)</td>
+                        <td>2</td>
+                        <td>AFFILIATION NO.</td>
+                        <td>1930610</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">3</td>
-                        <td class="px-6 py-4 font-bold border-b">CODE</td>
-                        <td class="px-6 py-4 border-b">55513</td>
+                        <td>3</td>
+                        <td>SCHOOL CODE</td>
+                        <td>55513</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">4</td>
-                        <td class="px-6 py-4 font-bold border-b">ADDRESS</td>
-                        <td class="px-6 py-4 border-b">538, Thudiyalur-Saravanampatti Road, Vellakinar Post, Coimbatore
-                          - 641029, Tamil Nadu</td>
+                        <td>4</td>
+                        <td>COMPLETE ADDRESS</td>
+                        <td>538, Thudiyalur-Saravanampatti Road, Vellakinar Post, Coimbatore - 641029, Tamil Nadu</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">5</td>
-                        <td class="px-6 py-4 font-bold border-b">PRINCIPAL</td>
-                        <td class="px-6 py-4 border-b">Sri Vidhya Prince</td>
+                        <td>5</td>
+                        <td>PRINCIPAL NAME</td>
+                        <td>Sri Vidhya Prince</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">6</td>
-                        <td class="px-6 py-4 font-bold border-b">QUALIFICATION</td>
-                        <td class="px-6 py-4 border-b">M.Sc, M.Ed, M.Phil</td>
+                        <td>6</td>
+                        <td>PRINCIPAL QUALIFICATION</td>
+                        <td>M.Sc, M.Ed, M.Phil</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">7</td>
-                        <td class="px-6 py-4 font-bold border-b">EMAIL</td>
-                        <td class="px-6 py-4 border-b">office@snsacademy.org</td>
+                        <td>7</td>
+                        <td>SCHOOL EMAIL ID</td>
+                        <td>office@snsacademy.org</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">8</td>
-                        <td class="px-6 py-4 font-bold border-b">CONTACT</td>
-                        <td class="px-6 py-4 border-b">+91 96299 37861</td>
+                        <td>8</td>
+                        <td>CONTACT DETAILS</td>
+                        <td>+91 96299 37861</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3 class="disc-section-title" style="border-left-color: #1e40af;">B. Documents and Information</h3>
+                <div class="disc-table-container">
+                  <table class="disc-table">
+                    <thead>
+                      <tr>
+                        <th>SL NO.</th>
+                        <th>DOCUMENTS/INFORMATION</th>
+                        <th>LINKS</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>COPIES OF AFFILIATION/UPGRADATION LETTER</td>
+                        <td><a href="https://cbse.snsacademy.org/cbse%20affiliation.PDF" target="_blank"
+                            class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>COPIES OF TRUST REGISTRATION/RENEWAL</td>
+                        <td><a href="https://cbse.snsacademy.org/TRUST%20DEED%20(1)-1.pdf" target="_blank"
+                            class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>COPY OF NO OBJECTION CERTIFICATE (NOC)</td>
+                        <td><a
+                            href="https://cbse.snsacademy.org/COPY%20OF%20NO%20OBJECTION%20CERTIFICATE%20(NOC)%20ISSUED,%20IF%20APPLICABLE,%20BY%20THE%20STATE%20GOVT.UT.PDF"
+                            target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>COPIES OF RECOGNITION CERTIFICATE (RTE)</td>
+                        <td><a
+                            href="https://cbse.snsacademy.org/COPIES%20OF%20RECOGNITION%20CERTIFICATE%20UNDER%20RTE%20ACT,%202009,%20AND%20IT%20S%20RENEWAL%20IF%20APPLICABLE.PDF"
+                            target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>COPY OF VALID BUILDING SAFETY CERTIFICATE</td>
+                        <td><a href="https://cbse.snsacademy.org/Building%20Safety%20certificate.pdf" target="_blank"
+                            class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>COPY OF VALID FIRE SAFETY CERTIFICATE</td>
+                        <td><a href="https://cbse.snsacademy.org/fire%20NOC.PDF" target="_blank" class="disc-link"><i
+                              class="fas fa-file-pdf"></i> View Document</a></td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>COPY OF DEO CERTIFICATE / SELF CERTIFICATE</td>
+                        <td><a href="https://cbse.snsacademy.org/deo.PDF" target="_blank" class="disc-link"><i
+                              class="fas fa-file-pdf"></i> View Document</a></td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>COPIES OF VALID WATER, HEALTH AND SANITATION</td>
+                        <td><a href="https://cbse.snsacademy.org/sanitary.PDF" target="_blank" class="disc-link"><i
+                              class="fas fa-file-pdf"></i> View Document</a></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
-
               <div id="tab-engineering" class="m-tab-content scroll-animate" style="display: none;">
                 <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4">A. General Information
                   - SNS COLLEGE OF TECHNOLOGY (AUTONOMOUS)</h3>
-                <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
-                  <table class="w-full text-left border-collapse">
+                <div class="disc-table-container">
+                  <table class="disc-table">
                     <thead>
-                      <tr class="bg-gradient-to-r from-blue-50 to-indigo-50">
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100 w-20">SL NO.
+                      <tr>
+                        <th>SL NO.
                         </th>
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100">INFORMATION
+                        <th>INFORMATION
                         </th>
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100">DETAILS</th>
+                        <th>DETAILS</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="px-6 py-4 border-b">1</td>
-                        <td class="px-6 py-4 font-bold border-b">NAME</td>
-                        <td class="px-6 py-4 border-b">SNS COLLEGE OF TECHNOLOGY (AUTONOMOUS)</td>
+                        <td>1</td>
+                        <td>NAME</td>
+                        <td>SNS COLLEGE OF TECHNOLOGY (AUTONOMOUS)</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">2</td>
-                        <td class="px-6 py-4 font-bold border-b">AFFILIATION</td>
-                        <td class="px-6 py-4 border-b">Anna University, Chennai</td>
+                        <td>2</td>
+                        <td>AFFILIATION</td>
+                        <td>Anna University, Chennai</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">3</td>
-                        <td class="px-6 py-4 font-bold border-b">CODE</td>
-                        <td class="px-6 py-4 border-b">Approved by AICTE</td>
+                        <td>3</td>
+                        <td>CODE</td>
+                        <td>Approved by AICTE</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">4</td>
-                        <td class="px-6 py-4 font-bold border-b">ADDRESS</td>
-                        <td class="px-6 py-4 border-b">SNS Kalvi Nagar, Sathy Main Road, Saravanampatti - Post,
+                        <td>4</td>
+                        <td>ADDRESS</td>
+                        <td>SNS Kalvi Nagar, Sathy Main Road, Saravanampatti - Post,
                           Coimbatore - 641 035, Tamil Nadu</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">5</td>
-                        <td class="px-6 py-4 font-bold border-b">PRINCIPAL</td>
-                        <td class="px-6 py-4 border-b">Dr. S. Charles</td>
+                        <td>5</td>
+                        <td>PRINCIPAL</td>
+                        <td>Dr. S. Charles</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">6</td>
-                        <td class="px-6 py-4 font-bold border-b">QUALIFICATION</td>
-                        <td class="px-6 py-4 border-b">M.E., Ph.D.</td>
+                        <td>6</td>
+                        <td>QUALIFICATION</td>
+                        <td>M.E., Ph.D.</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">7</td>
-                        <td class="px-6 py-4 font-bold border-b">EMAIL</td>
-                        <td class="px-6 py-4 border-b">snsct@snsgroups.com</td>
+                        <td>7</td>
+                        <td>EMAIL</td>
+                        <td>snsct@snsgroups.com</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">8</td>
-                        <td class="px-6 py-4 font-bold border-b">CONTACT</td>
-                        <td class="px-6 py-4 border-b">0422 - 2666264, 7550316701</td>
+                        <td>8</td>
+                        <td>CONTACT</td>
+                        <td>0422 - 2666264, 7550316701</td>
                       </tr>
                     </tbody>
                   </table>
@@ -7337,58 +7438,58 @@
               <div id="tab-arts" class="m-tab-content scroll-animate" style="display: none;">
                 <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4">A. General Information
                   - Dr. SNS RAJALAKSHMI COLLEGE OF ARTS AND SCIENCE (AUTONOMOUS)</h3>
-                <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
-                  <table class="w-full text-left border-collapse">
+                <div class="disc-table-container">
+                  <table class="disc-table">
                     <thead>
-                      <tr class="bg-gradient-to-r from-blue-50 to-indigo-50">
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100 w-20">SL NO.
+                      <tr>
+                        <th>SL NO.
                         </th>
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100">INFORMATION
+                        <th>INFORMATION
                         </th>
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100">DETAILS</th>
+                        <th>DETAILS</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="px-6 py-4 border-b">1</td>
-                        <td class="px-6 py-4 font-bold border-b">NAME</td>
-                        <td class="px-6 py-4 border-b">Dr. SNS RAJALAKSHMI COLLEGE OF ARTS AND SCIENCE (AUTONOMOUS)</td>
+                        <td>1</td>
+                        <td>NAME</td>
+                        <td>Dr. SNS RAJALAKSHMI COLLEGE OF ARTS AND SCIENCE (AUTONOMOUS)</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">2</td>
-                        <td class="px-6 py-4 font-bold border-b">AFFILIATION</td>
-                        <td class="px-6 py-4 border-b">Bharathiar University, Coimbatore</td>
+                        <td>2</td>
+                        <td>AFFILIATION</td>
+                        <td>Bharathiar University, Coimbatore</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">3</td>
-                        <td class="px-6 py-4 font-bold border-b">CODE</td>
-                        <td class="px-6 py-4 border-b">Approved by UGC / AICTE</td>
+                        <td>3</td>
+                        <td>CODE</td>
+                        <td>Approved by UGC / AICTE</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">4</td>
-                        <td class="px-6 py-4 font-bold border-b">ADDRESS</td>
-                        <td class="px-6 py-4 border-b">486, Thudiyalur - Saravanampatti Road, Saravanampatti Post,
+                        <td>4</td>
+                        <td>ADDRESS</td>
+                        <td>486, Thudiyalur - Saravanampatti Road, Saravanampatti Post,
                           Coimbatore - 641 049, Tamil Nadu</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">5</td>
-                        <td class="px-6 py-4 font-bold border-b">PRINCIPAL</td>
-                        <td class="px-6 py-4 border-b">Dr. A. Sivakumar</td>
+                        <td>5</td>
+                        <td>PRINCIPAL</td>
+                        <td>Dr. A. Sivakumar</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">6</td>
-                        <td class="px-6 py-4 font-bold border-b">QUALIFICATION</td>
-                        <td class="px-6 py-4 border-b">M.A., M.Phil., Ph.D.</td>
+                        <td>6</td>
+                        <td>QUALIFICATION</td>
+                        <td>M.A., M.Phil., Ph.D.</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">7</td>
-                        <td class="px-6 py-4 font-bold border-b">EMAIL</td>
-                        <td class="px-6 py-4 border-b">office@snsrcas.ac.in</td>
+                        <td>7</td>
+                        <td>EMAIL</td>
+                        <td>office@snsrcas.ac.in</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">8</td>
-                        <td class="px-6 py-4 font-bold border-b">CONTACT</td>
-                        <td class="px-6 py-4 border-b">0422 - 2666491</td>
+                        <td>8</td>
+                        <td>CONTACT</td>
+                        <td>0422 - 2666491</td>
                       </tr>
                     </tbody>
                   </table>
@@ -7396,121 +7497,308 @@
               </div>
 
               <div id="tab-paramedical" class="m-tab-content scroll-animate" style="display: none;">
-                <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4">A. General Information
-                  - SNS COLLEGE OF PHARMACY AND HEALTH SCIENCES</h3>
-                <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
-                  <table class="w-full text-left border-collapse">
-                    <thead>
-                      <tr class="bg-gradient-to-r from-blue-50 to-indigo-50">
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100 w-20">SL NO.
-                        </th>
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100">INFORMATION
-                        </th>
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100">DETAILS</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="px-6 py-4 border-b">1</td>
-                        <td class="px-6 py-4 font-bold border-b">NAME</td>
-                        <td class="px-6 py-4 border-b">SNS COLLEGE OF PHARMACY AND HEALTH SCIENCES</td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 border-b">2</td>
-                        <td class="px-6 py-4 font-bold border-b">AFFILIATION</td>
-                        <td class="px-6 py-4 border-b">The Tamil Nadu Dr. M.G.R. Medical University, Chennai</td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 border-b">3</td>
-                        <td class="px-6 py-4 font-bold border-b">CODE</td>
-                        <td class="px-6 py-4 border-b">Approved by PCI</td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 border-b">4</td>
-                        <td class="px-6 py-4 font-bold border-b">ADDRESS</td>
-                        <td class="px-6 py-4 border-b">536, Thudiyalur - Saravanampatti Road, Coimbatore - 641 029,
-                          Tamil Nadu</td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 border-b">5</td>
-                        <td class="px-6 py-4 font-bold border-b">PRINCIPAL</td>
-                        <td class="px-6 py-4 border-b">Dr. S. Sathesh Kumar</td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 border-b">6</td>
-                        <td class="px-6 py-4 font-bold border-b">QUALIFICATION</td>
-                        <td class="px-6 py-4 border-b">M.Pharm., Ph.D.</td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 border-b">7</td>
-                        <td class="px-6 py-4 font-bold border-b">EMAIL</td>
-                        <td class="px-6 py-4 border-b">snscphs@snsgroups.com</td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 border-b">8</td>
-                        <td class="px-6 py-4 font-bold border-b">CONTACT</td>
-                        <td class="px-6 py-4 border-b">95664 23456</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <!-- Sub Tabs for Paramedical colleges -->
+                <div
+                  class="flex flex-wrap justify-center gap-2 mb-8 bg-blue-50/50 p-4 rounded-3xl border border-blue-100 shadow-sm">
+                  <button onclick="switchParaTab('pharmacy')" style="background: #1e40af; color: white;"
+                    class="para-sub-btn active px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-md" style="background-color: #3b82f6; color: white;">Pharmacy</button>
+                  <button onclick="switchParaTab('nursing')"
+                    class="para-sub-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-blue-600 border border-blue-200 hover:bg-blue-50">Nursing</button>
+                  <button onclick="switchParaTab('allied')"
+                    class="para-sub-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-blue-600 border border-blue-200 hover:bg-blue-50">Allied
+                    Health</button>
+                  <button onclick="switchParaTab('physio')"
+                    class="para-sub-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-blue-600 border border-blue-200 hover:bg-blue-50">Physiotherapy</button>
+                </div>
+                <div id="para-sub-container">
+
+                  <div id="para-pharmacy" class="para-content" style="">
+                    <h3 class="disc-section-title">SNS COLLEGE OF PHARMACY AND HEALTH SCIENCES</h3>
+                    <div class="disc-table-container">
+                      <table class="disc-table">
+                        <thead>
+                          <tr>
+                            <th>SL NO.</th>
+                            <th>INFORMATION</th>
+                            <th>DETAILS</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Name of the Institution</td>
+                            <td>SNS COLLEGE OF PHARMACY AND HEALTH SCIENCES</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Affiliation / Approval</td>
+                            <td>The Tamil Nadu Dr. M.G.R. Medical University, Chennai</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Institutional Code</td>
+                            <td>Approved by PCI</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Complete Address</td>
+                            <td>536, Thudiyalur - Saravanampatti Road, Coimbatore - 641 029, Tamil Nadu</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Principal Name</td>
+                            <td>Dr. S. Sathesh Kumar</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>Principal Qualification</td>
+                            <td>M.Pharm., Ph.D.</td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>Email ID</td>
+                            <td>snscphs@snsgroups.com</td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>Contact Number</td>
+                            <td>95664 23456</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div id="para-nursing" class="para-content" style="display: none;">
+                    <h3 class="disc-section-title">SNS COLLEGE OF NURSING</h3>
+                    <div class="disc-table-container">
+                      <table class="disc-table">
+                        <thead>
+                          <tr>
+                            <th>SL NO.</th>
+                            <th>INFORMATION</th>
+                            <th>DETAILS</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Name of the Institution</td>
+                            <td>SNS COLLEGE OF NURSING</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Affiliation / Approval</td>
+                            <td>The Tamil Nadu Dr. M.G.R. Medical University, Chennai</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Institutional Code</td>
+                            <td>Recognized by INC & TNNMC</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Complete Address</td>
+                            <td>SNS Kalvi Nagar, Sathy Main Road (NH-209), Saravanampatti Post, Coimbatore - 641 035,
+                              Tamil Nadu</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Principal Name</td>
+                            <td>Prof. Dr. S. Kavitha</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>Principal Qualification</td>
+                            <td>M.Sc (N)., Ph.D.</td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>Email ID</td>
+                            <td>snscn@snsgroups.com</td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>Contact Number</td>
+                            <td>0422 - 2666264</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div id="para-allied" class="para-content" style="display: none;">
+                    <h3 class="disc-section-title">SNS COLLEGE OF ALLIED HEALTH SCIENCES</h3>
+                    <div class="disc-table-container">
+                      <table class="disc-table">
+                        <thead>
+                          <tr>
+                            <th>SL NO.</th>
+                            <th>INFORMATION</th>
+                            <th>DETAILS</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Name of the Institution</td>
+                            <td>SNS COLLEGE OF ALLIED HEALTH SCIENCES</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Affiliation / Approval</td>
+                            <td>The Tamil Nadu Dr. M.G.R. Medical University, Chennai</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Institutional Code</td>
+                            <td>Approved by Govt. of Tamil Nadu</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Complete Address</td>
+                            <td>SNS Kalvi Nagar, Sathy Main Road, Saravanampatti Post, Coimbatore - 641 035, Tamil Nadu
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Principal Name</td>
+                            <td>Dr. S. Rajalakshmi</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>Principal Qualification</td>
+                            <td>M.Sc., Ph.D.</td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>Email ID</td>
+                            <td>office@snscahs.org</td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>Contact Number</td>
+                            <td>0422 - 2666491</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div id="para-physio" class="para-content" style="display: none;">
+                    <h3 class="disc-section-title">SNS COLLEGE OF PHYSIOTHERAPY</h3>
+                    <div class="disc-table-container">
+                      <table class="disc-table">
+                        <thead>
+                          <tr>
+                            <th>SL NO.</th>
+                            <th>INFORMATION</th>
+                            <th>DETAILS</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Name of the Institution</td>
+                            <td>SNS COLLEGE OF PHYSIOTHERAPY</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Affiliation / Approval</td>
+                            <td>The Tamil Nadu Dr. M.G.R. Medical University, Chennai</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Institutional Code</td>
+                            <td>Accredited by IAP</td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Complete Address</td>
+                            <td>SNS Kalvi Nagar, Sathy Main Road, Saravanampatti Post, Coimbatore - 641 035, Tamil Nadu
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Principal Name</td>
+                            <td>Dr. K. Raja Senthil</td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>Principal Qualification</td>
+                            <td>MPT., Ph.D.</td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>Email ID</td>
+                            <td>principal@snscphysio.org</td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>Contact Number</td>
+                            <td>95664 23456</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
-
               <div id="tab-education" class="m-tab-content scroll-animate" style="display: none;">
                 <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4">A. General Information
                   - SNS SRI RAMAKRISHNA COLLEGE OF EDUCATION</h3>
-                <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
-                  <table class="w-full text-left border-collapse">
+                <div class="disc-table-container">
+                  <table class="disc-table">
                     <thead>
-                      <tr class="bg-gradient-to-r from-blue-50 to-indigo-50">
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100 w-20">SL NO.
+                      <tr>
+                        <th>SL NO.
                         </th>
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100">INFORMATION
+                        <th>INFORMATION
                         </th>
-                        <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-blue-100">DETAILS</th>
+                        <th>DETAILS</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="px-6 py-4 border-b">1</td>
-                        <td class="px-6 py-4 font-bold border-b">NAME</td>
-                        <td class="px-6 py-4 border-b">SNS SRI RAMAKRISHNA COLLEGE OF EDUCATION</td>
+                        <td>1</td>
+                        <td>NAME</td>
+                        <td>SNS SRI RAMAKRISHNA COLLEGE OF EDUCATION</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">2</td>
-                        <td class="px-6 py-4 font-bold border-b">AFFILIATION</td>
-                        <td class="px-6 py-4 border-b">Tamil Nadu Teachers Education University (TNTEU)</td>
+                        <td>2</td>
+                        <td>AFFILIATION</td>
+                        <td>Tamil Nadu Teachers Education University (TNTEU)</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">3</td>
-                        <td class="px-6 py-4 font-bold border-b">CODE</td>
-                        <td class="px-6 py-4 border-b">Approved by NCTE</td>
+                        <td>3</td>
+                        <td>CODE</td>
+                        <td>Approved by NCTE</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">4</td>
-                        <td class="px-6 py-4 font-bold border-b">ADDRESS</td>
-                        <td class="px-6 py-4 border-b">536, Thudiyalur - Saravanampatti Road, Coimbatore - 641 029,
+                        <td>4</td>
+                        <td>ADDRESS</td>
+                        <td>536, Thudiyalur - Saravanampatti Road, Coimbatore - 641 029,
                           Tamil Nadu</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">5</td>
-                        <td class="px-6 py-4 font-bold border-b">PRINCIPAL</td>
-                        <td class="px-6 py-4 border-b">Dr. S. Gomathi</td>
+                        <td>5</td>
+                        <td>PRINCIPAL</td>
+                        <td>Dr. S. Gomathi</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">6</td>
-                        <td class="px-6 py-4 font-bold border-b">QUALIFICATION</td>
-                        <td class="px-6 py-4 border-b">M.A., M.Ed., Ph.D.</td>
+                        <td>6</td>
+                        <td>QUALIFICATION</td>
+                        <td>M.A., M.Ed., Ph.D.</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">7</td>
-                        <td class="px-6 py-4 font-bold border-b">EMAIL</td>
-                        <td class="px-6 py-4 border-b">snssce@snsgroups.com</td>
+                        <td>7</td>
+                        <td>EMAIL</td>
+                        <td>snssce@snsgroups.com</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 border-b">8</td>
-                        <td class="px-6 py-4 font-bold border-b">CONTACT</td>
-                        <td class="px-6 py-4 border-b">95664 23456</td>
+                        <td>8</td>
+                        <td>CONTACT</td>
+                        <td>95664 23456</td>
                       </tr>
                     </tbody>
                   </table>
@@ -7617,7 +7905,9 @@
             </p>
             <div class="flex gap-3">
               <a href="https://www.facebook.com/snsinstitutions" target="_blank"
-                class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-blue-600 transition-colors">
+                class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/10  para-sub-btn
+                active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-blue-700 text-white shadow-md"
+                 transition-colors">
                 <i class="fab fa-facebook-f text-white"></i>
               </a>
               <a href="https://www.instagram.com/snsinstitutions/" target="_blank"
@@ -7689,6 +7979,74 @@
           </div>
         </div>
 
+        <style>
+          .disc-table-container {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+          }
+
+          .disc-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Inter', sans-serif;
+          }
+
+          .disc-table th {
+            background: #1e40af;
+            color: white;
+            text-align: left;
+            padding: 16px 24px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+          }
+
+          .disc-table td {
+            padding: 20px 24px;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 15px;
+            color: #334155;
+            line-height: 1.5;
+          }
+
+          .disc-table tr:last-child td {
+            border-bottom: none;
+          }
+
+          .disc-table tr:hover {
+            background-color: #f8fafc;
+          }
+
+          .disc-link {
+            color: #1e40af;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+          }
+
+          .disc-link:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+          }
+
+          .disc-section-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #1e40af;
+            padding-left: 1rem;
+          }
+        </style>
+
         <script>
           function showDisclosure(e) {
             if (e) e.preventDefault();
@@ -7699,15 +8057,26 @@
             document.getElementById('disclosure-overlay').style.display = 'none';
             document.body.style.overflow = 'auto';
           }
+          
           function switchDiscTab(tabKey) {
             const btns = document.querySelectorAll('.disc-tab-btn');
             btns.forEach(btn => {
-              const isTab = btn.getAttribute('onclick').includes(tabKey);
-              btn.classList.toggle('bg-blue-600', isTab);
-              btn.classList.toggle('text-white', isTab);
-              btn.classList.toggle('bg-gray-200', !isTab);
-              btn.classList.toggle('text-gray-700', !isTab);
+              const matches = btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabKey);
+              if (matches) {
+                btn.style.backgroundColor = '#3b82f6';
+                btn.style.color = 'white';
+                btn.classList.add('active');
+              } else {
+                btn.style.backgroundColor = '#f1f5f9';
+                btn.style.color = '#475569';
+                btn.classList.remove('active');
+              }
             });
+            document.querySelectorAll('.m-tab-content').forEach(c => c.style.display = 'none');
+            const target = document.getElementById('tab-' + tabKey);
+            if (target) target.style.display = 'block';
+          }
+);
             document.querySelectorAll('.m-tab-content').forEach(c => c.style.display = 'none');
             document.getElementById('tab-' + tabKey).style.display = 'block';
           }
