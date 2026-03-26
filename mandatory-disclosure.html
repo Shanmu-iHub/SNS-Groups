@@ -282,91 +282,251 @@
   <section class="py-24 bg-gray-50 pb-[100px]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-wrap justify-center gap-3 mb-12 scroll-animate visible">
-        <button data-tab="k12" class="tab-btn px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 bg-gray-200 hover:bg-gray-300">K-12</button>
-        <button data-tab="engineering" class="tab-btn active px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Engineering & Tech</button>
+        <button data-tab="k12" class="tab-btn active px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">K-12</button>
+        <button data-tab="engineering" class="tab-btn px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 bg-gray-200 hover:bg-gray-300">Engineering & Tech</button>
         <button data-tab="arts" class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Arts & Science</button>
         <button data-tab="paramedical" class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Paramedical</button>
         <button data-tab="education" class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Education</button>
       </div>
 
 
-      <!-- Content -->
-      <div id="m-general-tab" class="m-tab-content scroll-animate visible mb-16">
-        <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4">A. General Information</h3>
-        <div class="overflow-x-auto rounded-2xl border border-orange-200 shadow-lg bg-white">
-          <table class="w-full text-left border-collapse">
-            <thead>
-              <tr class="bg-gradient-to-r from-orange-50 to-amber-50">
-                <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-orange-200 w-20">SL NO.</th>
-                <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-orange-200">INFORMATION</th>
-                <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-orange-200">DETAILS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="hover:bg-orange-50/30 transition-colors bg-white">
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
-                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Name of the School</td>
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">SNS ACADEMY</td>
-              </tr>
-              <tr class="hover:bg-orange-50/30 transition-colors bg-gray-50/50">
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">2</td>
-                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Affiliation No.</td>
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">1930610</td>
-              </tr>
-              <tr class="hover:bg-orange-50/30 transition-colors bg-white">
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">3</td>
-                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">School Code</td>
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">55513</td>
-              </tr>
-              <tr class="hover:bg-orange-50/30 transition-colors bg-gray-50/50">
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">4</td>
-                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Complete Address with Pin Code</td>
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">538, Thudiyalur-Saravanampatti Road, Vellakinar Post, Coimbatore - 641029, Tamil Nadu</td>
-              </tr>
-              <tr class="hover:bg-orange-50/30 transition-colors bg-white">
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">5</td>
-                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Principal Name</td>
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">Sri Vidhya Prince</td>
-              </tr>
-              <tr class="hover:bg-orange-50/30 transition-colors bg-gray-50/50">
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">6</td>
-                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Principal Qualification</td>
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">M.Sc, M.Ed, M.Phil</td>
-              </tr>
-              <tr class="hover:bg-orange-50/30 transition-colors bg-white">
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">7</td>
-                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">School Email ID</td>
-                <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="mailto:office@snsacademy.org" class="text-orange-600 font-medium transition-colors">office@snsacademy.org</a></td>
-              </tr>
-              <tr class="hover:bg-orange-50/30 transition-colors bg-gray-50/50">
-                <td class="px-6 py-4 text-sm text-gray-700 font-medium">8</td>
-                <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Contact Details</td>
-                <td class="px-6 py-4 text-sm"><a href="tel:+919629937861" class="text-orange-600 font-medium transition-colors">+91 96299 37861</a></td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- K-12 Content -->
+      <div id="content-k12" class="tab-content-wrapper">
+        <div id="m-general-tab-k12" class="scroll-animate visible mb-16">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General Information - SNS ACADEMY</h3>
+          <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-[#1e40af] text-white">
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 w-24 uppercase">SL NO.</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">INFORMATION</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">DETAILS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Name of the School</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">SNS ACADEMY</td>
+                </tr>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-gray-50/50">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">2</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Affiliation No.</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">1930610</td>
+                </tr>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">3</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">School Code</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">55513</td>
+                </tr>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-gray-50/50">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">4</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Complete Address with Pin Code</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">538, Thudiyalur-Saravanampatti Road, Vellakinar Post, Coimbatore - 641029, Tamil Nadu</td>
+                </tr>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">5</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Principal Name</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">Sri Vidhya Prince</td>
+                </tr>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-gray-50/50">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">6</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Principal Qualification</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">M.Sc, M.Ed, M.Phil</td>
+                </tr>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">7</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">School Email ID</td>
+                  <td class="px-6 py-4 text-sm border-b border-gray-100 font-medium transition-colors">office@snsacademy.org</td>
+                </tr>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-gray-50/50">
+                  <td class="px-6 py-4 text-sm text-gray-700 font-medium">8</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 font-bold uppercase">Contact Details</td>
+                  <td class="px-6 py-4 text-sm font-medium transition-colors">90036 55855</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="m-documents-tab-k12" class="scroll-animate visible">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">B. Documents and Information</h3>
+          <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-[#1e40af] text-white">
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 w-24 uppercase">SL NO.</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">DOCUMENTS/INFORMATION</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">LINKS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Copies of Affiliation/Upgradation Letter</td>
+                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="#" class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-gray-50/50">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">2</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Copies of Trust Registration/Renewal</td>
+                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="#" class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">3</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Copy of No Objection Certificate (NOC)</td>
+                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="#" class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
-      <div id="m-documents-tab" class="m-tab-content scroll-animate visible">
-        <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4">B. Documents and Information</h3>
-        <div class="overflow-x-auto rounded-2xl border border-orange-200 shadow-lg bg-white">
-          <table class="w-full text-left border-collapse">
-            <thead>
-              <tr class="bg-gradient-to-r from-orange-50 to-amber-50">
-                <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-orange-200 w-20">SL NO.</th>
-                <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-orange-200">DOCUMENTS/INFORMATION</th>
-                <th class="px-6 py-4 text-sm font-bold text-gray-800 border-b-2 border-orange-200 w-40 text-center">LINKS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="hover:bg-orange-50/30 transition-colors bg-white">
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
-                <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase">Copies of Affiliation/Upgradation Letter</td>
-                <td class="px-6 py-4 text-sm border-b border-gray-100 text-center"><a href="#" class="text-orange-600 font-bold">View</a></td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- Engineering & Tech Content -->
+      <div id="content-engineering" class="tab-content-wrapper hidden">
+        <div id="m-general-tab-eng" class="scroll-animate visible mb-16">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General Information - Engineering & Tech</h3>
+          <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-[#1e40af] text-white">
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 w-24 uppercase">SL NO.</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">INFORMATION</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">DETAILS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Name of the Institutions</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">SNS College of Technology / SNS College of Engineering</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="m-documents-tab-eng" class="scroll-animate visible">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">B. Documents and Information</h3>
+          <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-[#1e40af] text-white">
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 w-24 uppercase">SL NO.</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">DOCUMENTS/INFORMATION</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">LINKS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Full Policy Book</td>
+                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="tech/Full Policy.pdf" target="_blank" class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-gray-50/50">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">2</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Organizational Chart</td>
+                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="tech/Organizational Chart.pdf" target="_blank" class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">3</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Strategy Plan</td>
+                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="tech/Strategy Plan.pdf" target="_blank" class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arts & Science Content -->
+      <div id="content-arts" class="tab-content-wrapper hidden">
+        <div id="m-general-tab-arts" class="scroll-animate visible mb-16">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General Information - Arts & Science</h3>
+          <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-[#1e40af] text-white">
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 w-24 uppercase">SL NO.</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">INFORMATION</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">DETAILS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Name of the Institution</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">SNS College of Arts & Science</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="m-documents-tab-arts" class="scroll-animate visible">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">B. Documents and Information</h3>
+          <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-[#1e40af] text-white">
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 w-24 uppercase">SL NO.</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">DOCUMENTS/INFORMATION</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">LINKS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium text-center" colspan="3">Data will be updated soon</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paramedical Content -->
+      <div id="content-paramedical" class="tab-content-wrapper hidden">
+        <div class="scroll-animate visible mb-16">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General Information - Paramedical</h3>
+          <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-[#1e40af] text-white">
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 w-24 uppercase">SL NO.</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">INFORMATION</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">DETAILS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium text-center" colspan="3">Paramedical details will be updated here</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Content -->
+      <div id="content-education" class="tab-content-wrapper hidden">
+        <div class="scroll-animate visible mb-16">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General Information - Education</h3>
+          <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-[#1e40af] text-white">
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 w-24 uppercase">SL NO.</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">INFORMATION</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">DETAILS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium text-center" colspan="3">Education details will be updated here</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -497,13 +657,30 @@
 
 
     // Program Category Tabs
+    // Program Category Tabs
     const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabWrappers = document.querySelectorAll('.tab-content-wrapper');
+
     tabBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        tabBtns.forEach(b => b.classList.remove('active', 'bg-blue-600', 'text-white'));
-        tabBtns.forEach(b => b.classList.add('bg-gray-200', 'text-gray-700'));
+        const targetTab = btn.getAttribute('data-tab');
+
+        // Update Buttons
+        tabBtns.forEach(b => {
+          b.classList.remove('active', 'bg-blue-600', 'text-white');
+          b.classList.add('bg-gray-200', 'text-gray-700');
+        });
         btn.classList.add('active');
         btn.classList.remove('bg-gray-200', 'text-gray-700');
+
+        // Update Content
+        tabWrappers.forEach(wrapper => {
+          if (wrapper.id === `content-${targetTab}`) {
+            wrapper.classList.remove('hidden');
+          } else {
+            wrapper.classList.add('hidden');
+          }
+        });
       });
     });
 
