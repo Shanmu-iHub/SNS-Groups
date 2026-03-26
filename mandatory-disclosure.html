@@ -75,6 +75,65 @@
     section[id] {
       scroll-margin-top: 100px;
     }
+
+    .disc-table-container {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+    }
+    .disc-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: 'Inter', sans-serif;
+    }
+    .disc-table th {
+        background: #1e40af;
+        color: white;
+        text-align: left;
+        padding: 16px 24px;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    .disc-table td {
+        padding: 20px 24px;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 15px;
+        color: #334155;
+        line-height: 1.5;
+    }
+    .disc-table tr:last-child td {
+        border-bottom: none;
+    }
+    .disc-table tr:hover {
+        background-color: #f8fafc;
+    }
+    .disc-link {
+        color: #1e40af;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .disc-link:hover {
+        color: #1d4ed8;
+        text-decoration: underline;
+    }
+    .disc-section-title {
+        font-size: 24px;
+        font-weight: 800;
+        color: #1e293b;
+        border-left: 4px solid #1e40af;
+        padding-left: 1rem;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+    }
   </style>
 </head>
 
@@ -408,32 +467,28 @@
         </div>
 
         <div id="m-documents-tab-eng" class="scroll-animate visible">
-          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">B. Documents and Information</h3>
-          <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
-            <table class="w-full text-left border-collapse">
+          <h3 class="disc-section-title">B. Documents and Information</h3>
+          <div class="disc-table-container">
+            <table class="disc-table">
               <thead>
-                <tr class="bg-[#1e40af] text-white">
-                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 w-24 uppercase">SL NO.</th>
-                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">DOCUMENTS/INFORMATION</th>
-                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">LINKS</th>
+                <tr>
+                  <th class="w-24">SL NO.</th>
+                  <th>DOCUMENTS/INFORMATION</th>
+                  <th>LINKS</th>
                 </tr>
               </thead>
               <tbody>
-                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Full Policy Book</td>
-                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="Tech/Full Policy.pdf" target="_blank" class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i class="fas fa-file-pdf"></i> View Document</a></td>
-                </tr>
-                <tr class="hover:bg-blue-50/30 transition-colors bg-gray-50/50">
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">2</td>
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Organizational Chart</td>
-                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="Tech/Organizational Chart.pdf" target="_blank" class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i class="fas fa-file-pdf"></i> View Document</a></td>
-                </tr>
-                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">3</td>
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Strategy Plan</td>
-                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="Tech/Strategy Plan.pdf" target="_blank" class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i class="fas fa-file-pdf"></i> View Document</a></td>
-                </tr>
+                <tr><td>1</td><td>COPIES OF AFFILIATION/UPGRADATION LETTER</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>2</td><td>COPIES OF TRUST REGISTRATION/RENEWAL</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>3</td><td>COPY OF NO OBJECTION CERTIFICATE (NOC)</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>4</td><td>COPIES OF RECOGNITION CERTIFICATE (RTE)</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>5</td><td>COPY OF VALID BUILDING SAFETY CERTIFICATE</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>6</td><td>COPY OF VALID FIRE SAFETY CERTIFICATE</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>7</td><td>COPY OF DEO CERTIFICATE / SELF CERTIFICATE</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>8</td><td>COPIES OF VALID WATER, HEALTH AND SANITATION</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>9</td><td>FULL POLICY BOOK</td><td><a href="Tech/Full Policy.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>10</td><td>ORGANIZATIONAL CHART</td><td><a href="Tech/Organizational Chart.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>11</td><td>STRATEGY PLAN</td><td><a href="Tech/Strategy Plan.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
               </tbody>
             </table>
           </div>
@@ -465,20 +520,25 @@
         </div>
 
         <div id="m-documents-tab-arts" class="scroll-animate visible">
-          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">B. Documents and Information</h3>
-          <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
-            <table class="w-full text-left border-collapse">
+          <h3 class="disc-section-title">B. Documents and Information</h3>
+          <div class="disc-table-container">
+            <table class="disc-table">
               <thead>
-                <tr class="bg-[#1e40af] text-white">
-                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 w-24 uppercase">SL NO.</th>
-                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">DOCUMENTS/INFORMATION</th>
-                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">LINKS</th>
+                <tr>
+                  <th class="w-24">SL NO.</th>
+                  <th>DOCUMENTS/INFORMATION</th>
+                  <th>LINKS</th>
                 </tr>
               </thead>
               <tbody>
-                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium text-center" colspan="3">Data will be updated soon</td>
-                </tr>
+                <tr><td>1</td><td>COPIES OF AFFILIATION/UPGRADATION LETTER</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>2</td><td>COPIES OF TRUST REGISTRATION/RENEWAL</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>3</td><td>COPY OF NO OBJECTION CERTIFICATE (NOC)</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>4</td><td>COPIES OF RECOGNITION CERTIFICATE (RTE)</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>5</td><td>COPY OF VALID BUILDING SAFETY CERTIFICATE</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>6</td><td>COPY OF VALID FIRE SAFETY CERTIFICATE</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>7</td><td>COPY OF DEO CERTIFICATE / SELF CERTIFICATE</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr><td>8</td><td>COPIES OF VALID WATER, HEALTH AND SANITATION</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
               </tbody>
             </table>
           </div>
