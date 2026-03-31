@@ -48,6 +48,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
 
         .hero-gradient {
@@ -74,39 +75,193 @@
                 transform: translateY(-15px);
             }
         }
+
+        /* Nav Dropdown Styles */
+        .group:hover>.nav-dropdown-content {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+        }
+
+        .nav-dropdown-content {
+            transition: all 0.2s ease;
+        }
     </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
 
-    <!-- Navigation -->
-    <nav class="w-full bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 py-4 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-            <a href="https://main.snsgroups.com/" class="flex items-center gap-3 group">
-                <img src="https://www.snsgroups.com/sns.png" alt="SNS Groups Logo"
-                    class="h-16 w-auto transition-transform duration-300 group-hover:scale-105">
-                <div class="flex flex-col">
-                    <span class="font-bold text-2xl text-gray-900 tracking-tight leading-none">SNS Institutions</span>
-                    <span class="text-[10px] text-blue-600 font-bold tracking-[0.2em] uppercase mt-1">Design
-                        Thinkers</span>
-                </div>
-            </a>
+    <!-- Announcement Banner - Agentic AI Bootcamp -->
+    <div id="announcementBanner"
+        class="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+            <div class="flex items-center gap-3 flex-1 justify-center">
+                <span class="animate-pulse">🚀</span>
+                <span class="text-white text-sm font-medium">
+                    <span class="hidden sm:inline">Upcoming:</span> <strong>Agentic AI Bootcamp</strong> - Build the
+                    Future of AI!
+                </span>
+                <a href="https://av.snsgroups.com" target="_blank"
+                    class="px-3 py-1 bg-white text-purple-700 rounded-full text-xs font-bold hover:bg-gray-100 transition-all">
+                    Register Now <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+            <button onclick="closeBanner()" class="text-white/80 hover:text-white p-1 ml-2">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
 
-            <div class="hidden md:flex gap-6 items-center">
-                <a href="https://main.snsgroups.com/"
-                    class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors">Home</a>
-                <a href="https://main.snsgroups.com/#programs"
-                    class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors">Programs</a>
-                <a href="https://main.snsgroups.com/#placements"
-                    class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors">Placements</a>
-                <a href="#" class="text-sm font-bold text-blue-700 hover:text-blue-800 transition-colors">Admission
-                    Form</a>
+    <!-- Navigation -->
+    <nav id="mainNav"
+        class="fixed top-8 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <a href="../" class="flex items-center gap-3 group">
+                    <img src="https://www.snsgroups.com/sns.png" alt="SNS Groups Logo"
+                        class="h-20 w-auto transition-transform duration-300 group-hover:scale-105">
+                    <div class="flex flex-col">
+                        <span class="font-bold text-3xl text-gray-900 tracking-tight leading-none">SNS
+                            Institutions</span>
+                        <span class="text-[12px] text-blue-600 font-bold tracking-[0.2em] uppercase mt-1">Design
+                            Thinkers</span>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center gap-4">
+                    <!-- Academics Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="text-gray-600 hover:text-blue-600 transition-colors text-base font-bold flex items-center gap-1">
+                            Academics <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 nav-dropdown-content">
+                            <div class="p-2">
+                                <a href="../#programs"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-graduation-cap mr-2 text-blue-600"></i>Programs Offered</a>
+                                <a href="../#placements"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-briefcase mr-2 text-green-600"></i>Placements</a>
+                                <a href="../#certifications"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-certificate mr-2 text-indigo-600"></i>Global Levels</a>
+                                <a href="../#3c-model"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg relative z-[60] pointer-events-auto"><i
+                                        class="fas fa-circle-notch mr-2 text-purple-600"></i>3C Competency</a>
+                                <a href="../#pillars"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg relative z-[60] pointer-events-auto"><i
+                                        class="fas fa-columns mr-2 text-amber-600"></i>Five Pillars</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Infrastructure Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="text-gray-600 hover:text-blue-600 transition-colors text-base font-bold flex items-center gap-1">
+                            Infrastructure <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 nav-dropdown-content">
+                            <div class="p-2">
+                                <a href="../#institutions"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-building mr-2 text-blue-600"></i>Our Campuses</a>
+                                <a href="https://snsspine.in" target="_blank"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-dumbbell mr-2 text-purple-600"></i>SPINE Facilities</a>
+                                <a href="../#ecosystem"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-bus mr-2 text-green-600"></i>Transport & Hostel</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Beyond Academics Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="text-gray-600 hover:text-blue-600 transition-colors text-base font-bold flex items-center gap-1">
+                            Beyond Academics <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 nav-dropdown-content">
+                            <div class="p-2">
+                                <a href="https://snsspine.in" target="_blank"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-futbol mr-2 text-green-600"></i>Sports & Clubs</a>
+                                <a href="https://snsihub.ai" target="_blank"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-rocket mr-2 text-pink-600"></i>Innovation Hub</a>
+                                <a href="../#events"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-calendar-alt mr-2 text-amber-600"></i>Events & Celebrations</a>
+                                <a href="../#alumni-stories"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-trophy mr-2 text-blue-600"></i>Success Stories</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Meet Us Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="text-gray-600 hover:text-blue-600 transition-colors text-base font-bold flex items-center gap-1">
+                            Meet Us <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute top-full right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 nav-dropdown-content">
+                            <div class="p-2">
+                                <a href="../#about"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-info-circle mr-2 text-blue-600"></i>About Us</a>
+                                <a href="../#leaders"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-users mr-2 text-purple-600"></i>Leadership</a>
+                                <a href="../#ecosystem"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-th-large mr-2 text-pink-600"></i>SNS Ecosystem</a>
+                                <a href="https://snsalumni.in" target="_blank"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-user-friends mr-2 text-cyan-600"></i>Alumni Network</a>
+                                <a href="https://iipc.snsgroups.com" target="_blank"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-handshake mr-2 text-indigo-600"></i>Industry Partners</a>
+                                <div class="border-t border-gray-100 my-1"></div>
+                                <a href="#"
+                                    class="block px-4 py-2 text-base font-semibold text-blue-600 bg-blue-50 rounded-lg"><i
+                                        class="fas fa-phone mr-2"></i>Admission Form</a>
+                                <a href="../mandatory-disclosure/"
+                                    class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
+                                        class="fas fa-file-alt mr-2 text-amber-600"></i>Mandatory Disclosure</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-3">
+                <a href="../#about" class="block text-gray-600 hover:text-blue-600 py-2">About</a>
+                <a href="../#programs" class="block text-gray-600 hover:text-blue-600 py-2">Programs</a>
+                <a href="../#placements" class="block text-gray-600 hover:text-blue-600 py-2">Placements</a>
+                <a href="../#certifications" class="block text-gray-600 hover:text-blue-600 py-2">Global Levels</a>
+                <a href="../#pillars" class="block text-gray-600 hover:text-blue-600 py-2">Five Pillars</a>
+                <a href="../#institutions" class="block text-gray-600 hover:text-blue-600 py-2">Institutions</a>
+                <a href="../#events" class="block text-gray-600 hover:text-blue-600 py-2">Events & Celebrations</a>
+                <a href="../#alumni-stories" class="block text-gray-600 hover:text-blue-600 py-2">Success Stories</a>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-grow flex items-center relative hero-gradient overflow-hidden py-16">
+    <main class="flex-grow flex items-center relative hero-gradient overflow-hidden pt-[180px] pb-16">
 
         <!-- Decorative Background Elements -->
         <div class="absolute inset-0 z-0 opacity-40">
@@ -248,7 +403,7 @@
         </div>
     </section>
 
-    <!-- Simple Footer -->
+    <!-- Footer -->
     <footer class="bg-slate-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
@@ -269,7 +424,7 @@
                     </p>
                     <div class="flex gap-3">
                         <a href="https://www.facebook.com/snsinstitutions" target="_blank"
-                            class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-blue-600 transition-colors">
+                            class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
                             <i class="fab fa-facebook-f text-white"></i>
                         </a>
                         <a href="https://www.instagram.com/snsinstitutions/" target="_blank"
@@ -299,14 +454,18 @@
                     <h3 class="font-bold mb-4" style="color: #1e40af; font-weight: 700; max-width: 100%;">Quick Links
                     </h3>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#programs" class="hover:text-white transition-colors">Programs</a></li>
-                        <li><a href="#placements" class="hover:text-white transition-colors">Placements</a></li>
+                        <li><a href="../#about" class="hover:text-white transition-colors">About Us</a>
+                        </li>
+                        <li><a href="../#programs" class="hover:text-white transition-colors">Programs</a>
+                        </li>
+                        <li><a href="../#placements" class="hover:text-white transition-colors">Placements</a></li>
                         <li><a href="../brochure/" target="_blank" class="hover:text-white transition-colors"><i
                                     class="fas fa-book mr-1"></i>Brochure</a>
                         </li>
                         <li><a href="../newsletter/" target="_blank" class="hover:text-white transition-colors"><i
                                     class="fas fa-newspaper mr-1"></i>Newsletter</a></li>
+                        <li><a href="../mandatory-disclosure/" class="hover:text-white transition-colors"><i
+                                    class="fas fa-file-shield mr-1"></i>Mandatory Disclosure</a></li>
                     </ul>
                 </div>
 
@@ -321,7 +480,8 @@
                                 iHub</a>
                         </li>
                         <li><a href="https://snsspine.in" target="_blank"
-                                class="hover:text-white transition-colors">SPINE</a></li>
+                                class="hover:text-white transition-colors">SPINE</a>
+                        </li>
                         <li><a href="https://snscourseware.org" target="_blank"
                                 class="hover:text-white transition-colors">Learning
                                 Community</a></li>
@@ -368,73 +528,77 @@
     </footer>
 
     <!-- Floating Action Buttons -->
-    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+    <div class="fixed right-4 bottom-24 z-50 flex flex-col gap-3">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919566423456" target="_blank"
+            class="group relative w-12 h-12 rounded-full bg-green-500 shadow-lg flex items-center justify-center hover:scale-110 hover:shadow-xl hover:bg-green-600 transition-all"
+            title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp text-white text-xl"></i>
+            <span
+                class="absolute right-full mr-3 px-3 py-1.5 bg-gray-900 text-white text-xs font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                WhatsApp
+            </span>
+        </a>
         <!-- Brochure -->
         <a href="../brochure/" target="_blank"
-            class="group relative flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 hover:scale-110 transition-all duration-300">
-            <i class="fas fa-file-pdf text-xl"></i>
+            class="group relative w-12 h-12 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center hover:scale-110 hover:shadow-xl transition-all"
+            title="SNS Brochure">
+            <i class="fas fa-book-open text-blue-600"></i>
             <span
-                class="absolute right-full mr-4 bg-gray-900 text-white text-xs font-semibold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">Brochure</span>
+                class="absolute right-full mr-3 px-3 py-1.5 bg-gray-900 text-white text-xs font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                Brochure
+            </span>
         </a>
         <!-- Newsletter -->
         <a href="../newsletter/" target="_blank"
-            class="group relative flex items-center justify-center w-12 h-12 bg-purple-600 text-white rounded-full shadow-lg hover:bg-purple-700 hover:scale-110 transition-all duration-300">
-            <i class="fas fa-envelope-open-text text-xl"></i>
+            class="group relative w-12 h-12 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center hover:scale-110 hover:shadow-xl transition-all"
+            title="SNS Newsletter">
+            <i class="fas fa-newspaper text-purple-600"></i>
             <span
-                class="absolute right-full mr-4 bg-gray-900 text-white text-xs font-semibold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">Newsletter</span>
+                class="absolute right-full mr-3 px-3 py-1.5 bg-gray-900 text-white text-xs font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                Newsletter
+            </span>
         </a>
-        <!-- WhatsApp -->
-        <a href="https://api.whatsapp.com/send?phone=919566423456" target="_blank"
-            class="group relative flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 hover:scale-110 transition-all duration-300">
-            <i class="fab fa-whatsapp text-2xl"></i>
+        <!-- SNS DNA -->
+        <a href="https://dna.snsgroups.com/" target="_blank"
+            class="group relative w-12 h-12 rounded-full bg-amber-50 shadow-lg border border-amber-200 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:bg-amber-100 transition-all"
+            title="SNS DNA">
+            <i class="fas fa-dna text-amber-600"></i>
             <span
-                class="absolute right-full mr-4 bg-gray-900 text-white text-xs font-semibold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">WhatsApp</span>
+                class="absolute right-full mr-3 px-3 py-1.5 bg-gray-900 text-white text-xs font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                SNS DNA
+            </span>
         </a>
     </div>
 
-    <!-- Video Handler Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const videoWrappers = document.querySelectorAll('.video-wrapper');
-            const isLocalFile = window.location.protocol === 'file:';
+        function closeBanner() {
+            document.getElementById('announcementBanner').style.display = 'none';
+            document.getElementById('mainNav').style.top = '0';
+        }
 
-            videoWrappers.forEach(wrapper => {
-                wrapper.addEventListener('click', function () {
-                    const videoNode = this.querySelector('.landing-block-node-card-video');
-                    let videoSrc = videoNode.getAttribute('data-src');
-                    const watchUrl = videoNode.getAttribute('data-source');
-
-                    // Fix protocol-relative URLs
-                    if (videoSrc.startsWith('//')) {
-                        videoSrc = 'https:' + videoSrc;
-                    }
-
-                    if (isLocalFile) {
-                        // Protocol restriction fix: Open in new tab if running locally
-                        window.open(watchUrl, '_blank');
-                    } else {
-                        // Create iframe for server environments
-                        const iframe = document.createElement('iframe');
-                        iframe.setAttribute('src', videoSrc);
-                        iframe.setAttribute('title', 'YouTube Video');
-                        iframe.setAttribute('frameborder', '0');
-                        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-                        iframe.setAttribute('allowfullscreen', 'true');
-                        iframe.classList.add('absolute', 'top-0', 'left-0', 'w-full', 'h-full');
-
-                        this.innerHTML = '';
-                        this.appendChild(iframe);
-                    }
-                });
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
             });
+        }
 
-            // Add a small tooltip or info for local users
-            if (isLocalFile) {
-                console.info("SNS Redesign: Running on file:// protocol. Videos will open in new tabs to bypass YouTube security restrictions.");
+        // Scroll Background Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            const banner = document.getElementById('announcementBanner');
+            const scrollThreshold = banner && banner.style.display !== 'none' ? 40 : 10;
+
+            if (window.scrollY > scrollThreshold) {
+                nav.style.padding = '12px 0';
+            } else {
+                nav.style.padding = '24px 0';
             }
         });
     </script>
-
 </body>
 
 </html>
