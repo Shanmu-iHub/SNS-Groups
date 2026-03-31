@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Now | SNS Institutions</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="SNS Institutions Enquiry Page - 1st Autonomous Institution with Design Thinking Curriculum. Submit your enquiry now.">
+    <meta name="keywords" content="SNS Institutions, Enquiry, Admission, Coimbatore Colleges">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://www.snsgroups.com/sns.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Tailwind Config to match main site aesthetic -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        sns: {
+                            primary: '#1e40af',
+                            secondary: '#7c3aed',
+                            accent: '#f59e0b',
+                            dark: '#0f172a',
+                            light: '#f8fafc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1e40af 100%);
+        }
+
+        .form-container {
+            backdrop-filter: blur(16px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="w-full bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 py-4 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <a href="https://main.snsgroups.com/" class="flex items-center gap-3 group">
+                <img src="https://www.snsgroups.com/sns.png" alt="SNS Groups Logo"
+                    class="h-16 w-auto transition-transform duration-300 group-hover:scale-105">
+                <div class="flex flex-col">
+                    <span class="font-bold text-2xl text-gray-900 tracking-tight leading-none">SNS Institutions</span>
+                    <span class="text-[10px] text-blue-600 font-bold tracking-[0.2em] uppercase mt-1">Design
+                        Thinkers</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex gap-6 items-center">
+                <a href="https://main.snsgroups.com/"
+                    class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+                <a href="https://main.snsgroups.com/#programs"
+                    class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors">Programs</a>
+                <a href="https://main.snsgroups.com/#placements"
+                    class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors">Placements</a>
+                <a href="../enquiry/"
+                    class="text-sm font-bold text-blue-700 hover:text-blue-800 transition-colors">Admission Form</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center relative hero-gradient overflow-hidden py-16">
+
+        <!-- Decorative Background Elements -->
+        <div class="absolute inset-0 z-0 opacity-40">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-amber-500/30 to-purple-500/30 rounded-full blur-3xl animate-float"
+                style="animation-delay: 1s;"></div>
+            <div
+                class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-blue-500/30 to-pink-500/30 rounded-full blur-3xl animate-float">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Column: Copy & Value Prop -->
+                <div class="text-white">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6 shadow-sm">
+                        <i class="fas fa-graduation-cap text-amber-400"></i>
+                        <span class="text-sm font-medium tracking-wide">Admissions Open 2026-27</span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                        Start Your Journey as a<br />
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-purple-400 to-blue-400">
+                            Design Thinker
+                        </span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-lg">
+                        Join India's first GenAI-Powered Design Thinking Institution. Fill out the form to take the
+                        first step towards a future-ready career with our 3350+ placement records at a Highest Salary of
+                        53 LPA.
+                    </p>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-400/20 text-amber-400 flex items-center justify-center border border-amber-400/30">
+                                <i class="fas fa-check text-sm"></i>
+                            </div>
+                            <span class="text-gray-200 font-medium">Design Thinking Based Curriculum</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-purple-400/20 text-purple-400 flex items-center justify-center border border-purple-400/30">
+                                <i class="fas fa-check text-sm"></i>
+                            </div>
+                            <span class="text-gray-200 font-medium">Industry Institute Partnership</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-400/20 text-blue-400 flex items-center justify-center border border-blue-400/30">
+                                <i class="fas fa-check text-sm"></i>
+                            </div>
+                            <span class="text-gray-200 font-medium">State-of-the-Art Spine Infrastructure</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Column: CRM Form -->
+                <div class="relative w-full max-w-lg mx-auto lg:ml-auto">
+                    <!-- Glow effect behind form -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-amber-400 to-blue-500 rounded-3xl blur-xl opacity-20 transform scale-105">
+                    </div>
+
+                    <div class="form-container relative rounded-3xl shadow-2xl p-8 md:p-10 border border-white/40">
+                        <!--div class="text-center mb-8">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-2"><b>Enquiry Form</b></h2>
+                            <p class="text-gray-500 text-sm">Please provide your details and our team will get back to
+                                you.</p>
+                        </div-->
+
+                        <!-- Bitrix24 Form Container -->
+                        <div class="w-full min-h-[400px]" id="form-container">
+                            <script data-b24-form="inline/52/2qc8ap" data-skip-moving="true">
+                                    (function (w, d, u) {
+                                        var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 180000 | 0);
+                                        var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
+                                    })(window, document, 'https://cdn.bitrix24.com/b11752903/crm/form/loader_52.js');
+                            </script>
+                        </div>
+
+                        <div class="mt-6 text-center text-xs text-gray-400">
+                            By submitting this form, you agree to our <a href="https://snsgroups.com/PrivacyPolicy/"
+                                class="underline hover:text-blue-600">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Videos Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Discover SNS Institutions</h2>
+                <div class="w-16 h-1 bg-amber-400 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- Video 1 -->
+                <div class="relative w-full rounded-2xl overflow-hidden shadow-xl border border-gray-100 aspect-video group cursor-pointer video-wrapper"
+                    data-video-id="aTfKtjB22Z8">
+                    <div class="landing-block-node-card-video embed-responsive-item g-video-preview w-100 h-100 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                        data-src="//www.youtube.com/embed/aTfKtjB22Z8?autoplay=1&controls=1&loop=1&mute=0&rel=0&start=0&html5=1&v=aTfKtjB22Z8"
+                        data-source="https://www.youtube.com/watch?v=aTfKtjB22Z8"
+                        data-preview="https://i.ytimg.com/vi/aTfKtjB22Z8/hqdefault.jpg"
+                        style="background-image: url('https://i.ytimg.com/vi/aTfKtjB22Z8/hqdefault.jpg'); min-height: 100%;">
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play text-xl ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 2 -->
+                <div class="relative w-full rounded-2xl overflow-hidden shadow-xl border border-gray-100 aspect-video group cursor-pointer video-wrapper"
+                    data-video-id="RqWHRWe9CNQ">
+                    <div class="landing-block-node-card-video embed-responsive-item g-video-preview w-100 h-100 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                        data-src="//www.youtube.com/embed/RqWHRWe9CNQ?autoplay=1&controls=1&loop=1&mute=0&rel=0&start=0&html5=1&v=RqWHRWe9CNQ"
+                        data-source="https://www.youtube.com/watch?v=RqWHRWe9CNQ"
+                        data-preview="https://i.ytimg.com/vi/RqWHRWe9CNQ/hqdefault.jpg"
+                        style="background-image: url('https://i.ytimg.com/vi/RqWHRWe9CNQ/hqdefault.jpg'); min-height: 100%;">
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play text-xl ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6 group">
+                        <div class="bg-white rounded-lg p-2 transition-transform duration-300 group-hover:scale-105">
+                            <img src="https://www.snsgroups.com/sns.png" alt="SNS Groups Logo" class="h-20 w-auto">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-3xl text-white tracking-tight leading-none">SNS Groups</span>
+                            <span class="text-[12px] text-blue-400 font-bold tracking-[0.2em] uppercase mt-1">Design
+                                Thinkers</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Sri SNS Charitable Trust - Serving society since 1997 in Education, Technology, and Social
+                        Welfare.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://www.facebook.com/snsinstitutions" target="_blank"
+                            class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-blue-600 transition-colors">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="https://www.instagram.com/snsinstitutions/" target="_blank"
+                            class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-pink-600 transition-colors">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="https://x.com/snsinstitutions" target="_blank"
+                            class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-black transition-colors">
+                            <svg class="w-4 h-4 text-white fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.494h2.039L6.486 3.24H4.298l13.311 17.407z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/school/snsinstitutions/" target="_blank"
+                            class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@snsinstitutions" target="_blank"
+                            class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-red-600 transition-colors">
+                            <i class="fab fa-youtube text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4" style="color: #1e40af; font-weight: 700; max-width: 100%;">Quick Links
+                    </h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#programs" class="hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="#placements" class="hover:text-white transition-colors">Placements</a></li>
+                        <li><a href="../brochure/" target="_blank" class="hover:text-white transition-colors"><i
+                                    class="fas fa-book mr-1"></i>Brochure</a>
+                        </li>
+                        <li><a href="../newsletter/" target="_blank" class="hover:text-white transition-colors"><i
+                                    class="fas fa-newspaper mr-1"></i>Newsletter</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4" style="color: #10b981; font-weight: 700; max-width: 100%;">Ecosystem</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="https://av.snsgroups.com" target="_blank"
+                                class="hover:text-white transition-colors text-amber-400"><i
+                                    class="fas fa-robot mr-1"></i>Agentic AI
+                                Bootcamp</a></li>
+                        <li><a href="https://snsihub.ai" target="_blank" class="hover:text-white transition-colors">SNS
+                                iHub</a>
+                        </li>
+                        <li><a href="https://snsspine.in" target="_blank"
+                                class="hover:text-white transition-colors">SPINE</a></li>
+                        <li><a href="https://snscourseware.org" target="_blank"
+                                class="hover:text-white transition-colors">Learning
+                                Community</a></li>
+                        <li><a href="https://snsalumni.in" target="_blank"
+                                class="hover:text-white transition-colors">Alumni
+                                Network</a></li>
+                    </ul>
+                </div>
+
+                <div id="contact">
+                    <h3 class="font-bold mb-4" style="color: #f59e0b; font-weight: 700; max-width: 100%;">Contact</h3>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-blue-400"></i>
+                            <span>536, Thudiyalur - Saravanampatti Road, Coimbatore - 641 029, Tamil Nadu</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone text-green-400"></i>
+                            <span>95664 23456</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-headset text-amber-400"></i>
+                            <span>Admissions: 90036 55855</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-pink-400"></i>
+                            <span>director.iipc.sns@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-briefcase text-purple-400"></i>
+                            <span>For Careers: job@snsgroups.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">© 2026 SNS Groups. All rights reserved.</p>
+                <p class="text-gray-500 text-sm mt-2 md:mt-0">
+                    <i class="fas fa-heart text-red-500"></i> Built with Design Thinking
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <!-- Brochure -->
+        <a href="../brochure/" target="_blank"
+            class="group relative flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 hover:scale-110 transition-all duration-300">
+            <i class="fas fa-file-pdf text-xl"></i>
+            <span
+                class="absolute right-full mr-4 bg-gray-900 text-white text-xs font-semibold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">Brochure</span>
+        </a>
+        <!-- Newsletter -->
+        <a href="../newsletter/" target="_blank"
+            class="group relative flex items-center justify-center w-12 h-12 bg-purple-600 text-white rounded-full shadow-lg hover:bg-purple-700 hover:scale-110 transition-all duration-300">
+            <i class="fas fa-envelope-open-text text-xl"></i>
+            <span
+                class="absolute right-full mr-4 bg-gray-900 text-white text-xs font-semibold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">Newsletter</span>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://api.whatsapp.com/send?phone=919566423456" target="_blank"
+            class="group relative flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 hover:scale-110 transition-all duration-300">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            <span
+                class="absolute right-full mr-4 bg-gray-900 text-white text-xs font-semibold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Video Handler Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const videoWrappers = document.querySelectorAll('.video-wrapper');
+            const isLocalFile = window.location.protocol === 'file:';
+
+            videoWrappers.forEach(wrapper => {
+                wrapper.addEventListener('click', function () {
+                    const videoNode = this.querySelector('.landing-block-node-card-video');
+                    let videoSrc = videoNode.getAttribute('data-src');
+                    const watchUrl = videoNode.getAttribute('data-source');
+
+                    // Fix protocol-relative URLs
+                    if (videoSrc.startsWith('//')) {
+                        videoSrc = 'https:' + videoSrc;
+                    }
+
+                    if (isLocalFile) {
+                        // Protocol restriction fix: Open in new tab if running locally
+                        window.open(watchUrl, '_blank');
+                    } else {
+                        // Create iframe for server environments
+                        const iframe = document.createElement('iframe');
+                        iframe.setAttribute('src', videoSrc);
+                        iframe.setAttribute('title', 'YouTube Video');
+                        iframe.setAttribute('frameborder', '0');
+                        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                        iframe.setAttribute('allowfullscreen', 'true');
+                        iframe.classList.add('absolute', 'top-0', 'left-0', 'w-full', 'h-full');
+
+                        this.innerHTML = '';
+                        this.appendChild(iframe);
+                    }
+                });
+            });
+
+            // Add a small tooltip or info for local users
+            if (isLocalFile) {
+                console.info("SNS Redesign: Running on file:// protocol. Videos will open in new tabs to bypass YouTube security restrictions.");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

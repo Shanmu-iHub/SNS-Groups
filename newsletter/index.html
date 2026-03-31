@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SNS Institutions - Newsletter</title>
     <style>
-        body, html {
+        body,
+        html {
             margin: 0;
             padding: 0;
+            width: 100%;
             height: 100%;
             overflow: hidden;
+            /* Prevents unwanted scrollbars */
             background-color: #f8fafc;
         }
-        iframe {
+
+        .flipbook-container {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .flipbook-container iframe {
             width: 100%;
             height: 100%;
             border: none;
+            display: block;
         }
     </style>
 </head>
+
 <body>
-    <iframe src="https://online.flippingbook.com/view/850725668/" 
-            title="SNS Institutions Newsletter"
-            allowfullscreen>
-    </iframe>
+    <div class="flipbook-container">
+        <iframe src="https://online.fliphtml5.com/ldlzd/jbdc/" title="SNS Institutions News Letter" allowfullscreen>
+        </iframe>
+    </div>
 </body>
+
 </html>

@@ -77,62 +77,70 @@
     }
 
     .disc-table-container {
-        background: white;
-        border-radius: 16px;
-        overflow: hidden;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        margin-bottom: 2rem;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
     }
+
     .disc-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-family: 'Inter', sans-serif;
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Inter', sans-serif;
     }
+
     .disc-table th {
-        background: #1e40af;
-        color: white;
-        text-align: left;
-        padding: 16px 24px;
-        font-size: 14px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
+      background: #1e40af;
+      color: white;
+      text-align: left;
+      padding: 16px 24px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
+
     .disc-table td {
-        padding: 20px 24px;
-        border-bottom: 1px solid #f1f5f9;
-        font-size: 15px;
-        color: #334155;
-        line-height: 1.5;
+      padding: 20px 24px;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 15px;
+      color: #334155;
+      line-height: 1.5;
     }
+
     .disc-table tr:last-child td {
-        border-bottom: none;
+      border-bottom: none;
     }
+
     .disc-table tr:hover {
-        background-color: #f8fafc;
+      background-color: #f8fafc;
     }
+
     .disc-link {
-        color: #1e40af;
-        font-weight: 700;
-        text-decoration: none;
-        transition: all 0.2s;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
+      color: #1e40af;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
+
     .disc-link:hover {
-        color: #1d4ed8;
-        text-decoration: underline;
+      color: #1d4ed8;
+      text-decoration: underline;
     }
+
     .disc-section-title {
-        font-size: 24px;
-        font-weight: 800;
-        color: #1e293b;
-        border-left: 4px solid #1e40af;
-        padding-left: 1rem;
-        margin-bottom: 1.5rem;
-        text-transform: uppercase;
+      font-size: 24px;
+      font-weight: 800;
+      color: #1e293b;
+      border-left: 4px solid #1e40af;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
     }
   </style>
 </head>
@@ -279,7 +287,7 @@
                 <a href="index.html#contact"
                   class="block px-4 py-2 text-base font-semibold text-gray-700 hover:bg-blue-50 rounded-lg"><i
                     class="fas fa-phone mr-2 text-green-600"></i>Contact Us</a>
-                <a href="mandatory-disclosure.html"
+                <a href="../mandatory-disclosure/"
                   class="block px-4 py-2 text-base font-semibold text-amber-600 bg-blue-50 rounded-lg"><i
                     class="fas fa-file-shield mr-2"></i>Mandatory Disclosure</a>
               </div>
@@ -298,7 +306,7 @@
         <a href="index.html#programs" class="block text-gray-600 hover:text-blue-600 py-2">Programs</a>
         <a href="index.html#placements" class="block text-gray-600 hover:text-blue-600 py-2">Placements</a>
         <a href="index.html#certifications" class="block text-gray-600 hover:text-blue-600 py-2">Global Levels</a>
-        <a href="mandatory-disclosure.html" class="block text-blue-600 font-bold py-2">Mandatory Disclosure</a>
+        <a href="../mandatory-disclosure/" class="block text-blue-600 font-bold py-2">Mandatory Disclosure</a>
       </div>
     </div>
   </nav>
@@ -325,11 +333,14 @@
 
       <!-- Content Header -->
       <div class="text-center scroll-animate visible">
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-amber-100/80 text-amber-700 rounded-full text-xs font-bold mb-6 ring-1 ring-amber-200 ring-offset-1">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 bg-amber-100/80 text-amber-700 rounded-full text-xs font-bold mb-6 ring-1 ring-amber-200 ring-offset-1">
           <i class="fas fa-shield-halved text-[10px]"></i> Transparency & Compliance
         </div>
         <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight" style="color: #1e40af; line-height: 1.2;">
-          Compliance & <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-600">Mandatory Disclosure</span>
+          Compliance & <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-600">Mandatory
+            Disclosure</span>
         </h1>
         <p class="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed font-medium">
           Official documents, legal information, and mandatory public disclosures as per CBSE / AICTE norms.
@@ -342,18 +353,26 @@
   <section class="py-24 bg-gray-50 pb-[100px]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-wrap justify-center gap-3 mb-12 scroll-animate visible">
-        <button data-tab="k12" class="tab-btn active px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">K-12</button>
-        <button data-tab="engineering" class="tab-btn px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 bg-gray-200 hover:bg-gray-300">Engineering & Tech</button>
-        <button data-tab="arts" class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Arts & Science</button>
-        <button data-tab="paramedical" class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Paramedical</button>
-        <button data-tab="education" class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Education</button>
+        <button data-tab="k12"
+          class="tab-btn active px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">K-12</button>
+        <button data-tab="engineering"
+          class="tab-btn px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 bg-gray-200 hover:bg-gray-300">Engineering
+          & Tech</button>
+        <button data-tab="arts"
+          class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Arts
+          & Science</button>
+        <button data-tab="paramedical"
+          class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Paramedical</button>
+        <button data-tab="education"
+          class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Education</button>
       </div>
 
 
       <!-- K-12 Content -->
       <div id="content-k12" class="tab-content-wrapper">
         <div id="m-general-tab-k12" class="scroll-animate visible mb-16">
-          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General Information - SNS ACADEMY</h3>
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General
+            Information - SNS ACADEMY</h3>
           <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
             <table class="w-full text-left border-collapse">
               <thead>
@@ -366,38 +385,48 @@
               <tbody>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-white">
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
-                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Name of the School</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Name of the
+                    School</td>
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">SNS ACADEMY</td>
                 </tr>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-gray-50/50">
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">2</td>
-                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Affiliation No.</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Affiliation
+                    No.</td>
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">1930610</td>
                 </tr>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-white">
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">3</td>
-                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">School Code</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">School Code
+                  </td>
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">55513</td>
                 </tr>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-gray-50/50">
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">4</td>
-                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Complete Address with Pin Code</td>
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">538, Thudiyalur-Saravanampatti Road, Vellakinar Post, Coimbatore - 641029, Tamil Nadu</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Complete
+                    Address with Pin Code</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">538, Thudiyalur-Saravanampatti
+                    Road, Vellakinar Post, Coimbatore - 641029, Tamil Nadu</td>
                 </tr>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-white">
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">5</td>
-                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Principal Name</td>
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">Sri Vidhya Prince</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Principal
+                    Name</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">Sri Vidhya Prince
+                  </td>
                 </tr>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-gray-50/50">
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">6</td>
-                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Principal Qualification</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Principal
+                    Qualification</td>
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100">M.Sc, M.Ed, M.Phil</td>
                 </tr>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-white">
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">7</td>
-                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">School Email ID</td>
-                  <td class="px-6 py-4 text-sm border-b border-gray-100 font-medium transition-colors">office@snsacademy.org</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">School Email
+                    ID</td>
+                  <td class="px-6 py-4 text-sm border-b border-gray-100 font-medium transition-colors">
+                    office@snsacademy.org</td>
                 </tr>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-gray-50/50">
                   <td class="px-6 py-4 text-sm text-gray-700 font-medium">8</td>
@@ -410,7 +439,8 @@
         </div>
 
         <div id="m-documents-tab-k12" class="scroll-animate visible">
-          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">B. Documents and Information</h3>
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">B. Documents and
+            Information</h3>
           <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
             <table class="w-full text-left border-collapse">
               <thead>
@@ -423,18 +453,27 @@
               <tbody>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-white">
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Copies of Affiliation/Upgradation Letter</td>
-                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="#" class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Copies of
+                    Affiliation/Upgradation Letter</td>
+                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="#"
+                      class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i
+                        class="fas fa-file-pdf"></i> View Document</a></td>
                 </tr>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-gray-50/50">
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">2</td>
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Copies of Trust Registration/Renewal</td>
-                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="#" class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Copies of
+                    Trust Registration/Renewal</td>
+                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="#"
+                      class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i
+                        class="fas fa-file-pdf"></i> View Document</a></td>
                 </tr>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-white">
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">3</td>
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Copy of No Objection Certificate (NOC)</td>
-                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="#" class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Copy of No
+                    Objection Certificate (NOC)</td>
+                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="#"
+                      class="text-blue-800 font-bold uppercase inline-flex items-center gap-2"><i
+                        class="fas fa-file-pdf"></i> View Document</a></td>
                 </tr>
               </tbody>
             </table>
@@ -445,7 +484,8 @@
       <!-- Engineering & Tech Content -->
       <div id="content-engineering" class="tab-content-wrapper hidden">
         <div id="m-general-tab-eng" class="scroll-animate visible mb-16">
-          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General Information - Engineering & Tech</h3>
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General
+            Information - Engineering & Tech</h3>
           <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
             <table class="w-full text-left border-collapse">
               <thead>
@@ -458,8 +498,10 @@
               <tbody>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-white">
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
-                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Name of the Institutions</td>
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">SNS College of Technology / SNS College of Engineering</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Name of the
+                    Institutions</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">SNS College of
+                    Technology / SNS College of Engineering</td>
                 </tr>
               </tbody>
             </table>
@@ -478,17 +520,72 @@
                 </tr>
               </thead>
               <tbody>
-                <tr><td>1</td><td>COPIES OF AFFILIATION/UPGRADATION LETTER</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>2</td><td>COPIES OF TRUST REGISTRATION/RENEWAL</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>3</td><td>COPY OF NO OBJECTION CERTIFICATE (NOC)</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>4</td><td>COPIES OF RECOGNITION CERTIFICATE (RTE)</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>5</td><td>COPY OF VALID BUILDING SAFETY CERTIFICATE</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>6</td><td>COPY OF VALID FIRE SAFETY CERTIFICATE</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>7</td><td>COPY OF DEO CERTIFICATE / SELF CERTIFICATE</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>8</td><td>COPIES OF VALID WATER, HEALTH AND SANITATION</td><td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>9</td><td>FULL POLICY BOOK</td><td><a href="Tech/Full Policy.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>10</td><td>ORGANIZATIONAL CHART</td><td><a href="Tech/Organizational Chart.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>11</td><td>STRATEGY PLAN</td><td><a href="Tech/Strategy Plan.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr>
+                  <td>1</td>
+                  <td>COPIES OF AFFILIATION/UPGRADATION LETTER</td>
+                  <td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>COPIES OF TRUST REGISTRATION/RENEWAL</td>
+                  <td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>COPY OF NO OBJECTION CERTIFICATE (NOC)</td>
+                  <td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>COPIES OF RECOGNITION CERTIFICATE (RTE)</td>
+                  <td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>COPY OF VALID BUILDING SAFETY CERTIFICATE</td>
+                  <td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>COPY OF VALID FIRE SAFETY CERTIFICATE</td>
+                  <td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>COPY OF DEO CERTIFICATE / SELF CERTIFICATE</td>
+                  <td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>COPIES OF VALID WATER, HEALTH AND SANITATION</td>
+                  <td><a href="#" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>FULL POLICY BOOK</td>
+                  <td><a href="Tech/Full Policy.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i>
+                      View Document</a></td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>ORGANIZATIONAL CHART</td>
+                  <td><a href="Tech/Organizational Chart.pdf" target="_blank" class="disc-link"><i
+                        class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>STRATEGY PLAN</td>
+                  <td><a href="Tech/Strategy Plan.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i>
+                      View Document</a></td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -498,7 +595,8 @@
       <!-- Arts & Science Content -->
       <div id="content-arts" class="tab-content-wrapper hidden">
         <div id="m-general-tab-arts" class="scroll-animate visible mb-16">
-          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General Information - Arts & Science</h3>
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General
+            Information - Arts & Science</h3>
           <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
             <table class="w-full text-left border-collapse">
               <thead>
@@ -511,8 +609,10 @@
               <tbody>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-white">
                   <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
-                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Name of the Institution</td>
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">SNS College of Arts & Science</td>
+                  <td class="px-6 py-4 text-sm text-gray-900 border-b border-gray-100 font-bold uppercase">Name of the
+                    Institution</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">SNS College of Arts &
+                    Science</td>
                 </tr>
               </tbody>
             </table>
@@ -531,14 +631,54 @@
                 </tr>
               </thead>
               <tbody>
-                <tr><td>1</td><td>COPIES OF AFFILIATION/UPGRADATION LETTER</td><td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>2</td><td>COPIES OF TRUST REGISTRATION/RENEWAL</td><td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>3</td><td>COPY OF NO OBJECTION CERTIFICATE (NOC)</td><td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>4</td><td>COPIES OF RECOGNITION CERTIFICATE (RTE)</td><td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>5</td><td>COPY OF VALID BUILDING SAFETY CERTIFICATE</td><td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>6</td><td>COPY OF VALID FIRE SAFETY CERTIFICATE</td><td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>7</td><td>COPY OF DEO CERTIFICATE / SELF CERTIFICATE</td><td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
-                <tr><td>8</td><td>COPIES OF VALID WATER, HEALTH AND SANITATION</td><td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+                <tr>
+                  <td>1</td>
+                  <td>COPIES OF AFFILIATION/UPGRADATION LETTER</td>
+                  <td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i
+                        class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>COPIES OF TRUST REGISTRATION/RENEWAL</td>
+                  <td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i
+                        class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>COPY OF NO OBJECTION CERTIFICATE (NOC)</td>
+                  <td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i
+                        class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>COPIES OF RECOGNITION CERTIFICATE (RTE)</td>
+                  <td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i
+                        class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>COPY OF VALID BUILDING SAFETY CERTIFICATE</td>
+                  <td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i
+                        class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>COPY OF VALID FIRE SAFETY CERTIFICATE</td>
+                  <td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i
+                        class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>COPY OF DEO CERTIFICATE / SELF CERTIFICATE</td>
+                  <td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i
+                        class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>COPIES OF VALID WATER, HEALTH AND SANITATION</td>
+                  <td><a href="Arts-Science/Mandatory Disclosure Document.pdf" target="_blank" class="disc-link"><i
+                        class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -548,7 +688,8 @@
       <!-- Paramedical Content -->
       <div id="content-paramedical" class="tab-content-wrapper hidden">
         <div class="scroll-animate visible mb-16">
-          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General Information - Paramedical</h3>
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General
+            Information - Paramedical</h3>
           <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
             <table class="w-full text-left border-collapse">
               <thead>
@@ -560,7 +701,8 @@
               </thead>
               <tbody>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-white">
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium text-center" colspan="3">Paramedical details will be updated here</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium text-center"
+                    colspan="3">Paramedical details will be updated here</td>
                 </tr>
               </tbody>
             </table>
@@ -571,7 +713,8 @@
       <!-- Education Content -->
       <div id="content-education" class="tab-content-wrapper hidden">
         <div class="scroll-animate visible mb-16">
-          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General Information - Education</h3>
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General
+            Information - Education</h3>
           <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
             <table class="w-full text-left border-collapse">
               <thead>
@@ -583,7 +726,8 @@
               </thead>
               <tbody>
                 <tr class="hover:bg-blue-50/30 transition-colors bg-white">
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium text-center" colspan="3">Education details will be updated here</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium text-center"
+                    colspan="3">Education details will be updated here</td>
                 </tr>
               </tbody>
             </table>
@@ -647,12 +791,12 @@
             <li><a href="index.html#about" class="hover:text-white transition-colors">About Us</a></li>
             <li><a href="index.html#programs" class="hover:text-white transition-colors">Programs</a></li>
             <li><a href="index.html#placements" class="hover:text-white transition-colors">Placements</a></li>
-            <li><a href="brochure-viewer.html" target="_blank"
-                class="hover:text-white transition-colors"><i class="fas fa-book mr-1"></i>Brochure</a>
+            <li><a href="../brochure/" target="_blank" class="hover:text-white transition-colors"><i
+                  class="fas fa-book mr-1"></i>Brochure</a>
             </li>
             <li><a href="https://main.snsgroups.com/newsletter/" target="_blank"
                 class="hover:text-white transition-colors"><i class="fas fa-newspaper mr-1"></i>Newsletter</a></li>
-            <li><a href="mandatory-disclosure.html" class="hover:text-white transition-colors"><i
+            <li><a href="../mandatory-disclosure/" class="hover:text-white transition-colors"><i
                   class="fas fa-file-shield mr-1"></i>Mandatory Disclosure</a></li>
           </ul>
         </div>
@@ -756,4 +900,3 @@
 </body>
 
 </html>
-
