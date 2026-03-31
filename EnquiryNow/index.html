@@ -598,6 +598,30 @@
                 nav.style.padding = '24px 0';
             }
         });
+
+        // Video handling
+        document.querySelectorAll('.video-wrapper').forEach(wrapper => {
+            wrapper.addEventListener('click', () => {
+                const videoPreview = wrapper.querySelector('.g-video-preview');
+                if (!videoPreview) return;
+                
+                let videoSrc = videoPreview.getAttribute('data-src');
+                if (videoSrc && videoSrc.startsWith('//')) {
+                    videoSrc = 'https:' + videoSrc;
+                }
+                
+                wrapper.innerHTML = `
+                    <iframe 
+                        class="w-full h-full absolute inset-0" 
+                        src="${videoSrc}" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                `;
+            });
+        });
     </script>
 </body>
 
