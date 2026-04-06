@@ -6528,6 +6528,7 @@
       { title: 'SPINE', subtitle: 'snsspine.in', description: 'Student Activity Center. Youth leadership, clubs, events, and extracurricular activities hub.', url: 'https://snsspine.in/', icon: 'people', color: '#ec4899', bg: '#fdf2f8' },
       { title: 'SNS iHub', subtitle: 'snsihub.ai', description: 'Innovation & Incubation Hub. Startup support, AI/GenAI initiatives, and entrepreneurship ecosystem.', url: 'https://snsihub.ai/', icon: 'lightbulb', color: '#f59e0b', bg: '#fffbeb' },
       { title: 'IIPC Portal', subtitle: 'iipc.snsgroups.com', description: 'Industry partnerships, placement records, and corporate connections. Training & development programs.', url: 'https://iipc.snsgroups.com/', icon: 'business', color: '#06b6d4', bg: '#ecfeff' },
+      { title: 'Helpdesk Portal', subtitle: 'helpdesk.snsgroups.com', description: 'Centralized support system for managing queries, resolving issues, and providing quick assistance across all SNS platforms.', url: 'https://helpdesk.snsgroups.com/', icon: 'fa-solid fa-headset', color: '#6366f1', bg: '#e0e7ff', actionText: 'Get Support' },
       { title: 'Mandatory Disclosure', subtitle: 'Transparency & Compliance', description: 'Official documents, legal information, and mandatory public disclosures as per CBSE / AICTE norms.', url: '#', icon: 'file_copy', color: '#b45309', bg: '#fffbeb', isDisclosure: true }
     ];
 
@@ -6566,7 +6567,7 @@
                             </div>
                             <p class="portal-description">${p.description}</p>
                             <div style="margin-top: 16px; display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: ${p.color};">
-                                Visit ${p.title} <span class="material-symbols-rounded" style="font-size: 18px;">arrow_forward</span>
+                                ${p.actionText || 'Visit ' + p.title} <span class="material-symbols-rounded" style="font-size: 18px;">arrow_forward</span>
                             </div>
                         </div>
                     `;
