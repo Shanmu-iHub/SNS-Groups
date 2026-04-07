@@ -3590,9 +3590,19 @@
         const salaryObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const width = entry.target.getAttribute('data-width');
-                    entry.target.style.width = width;
-                    // salaryObserver.unobserve(entry.target);
+                    const target = entry.target;
+                    const width = target.getAttribute('data-width');
+
+                    // Initial state: ensure it's at 0
+                    target.style.setProperty('width', '0', 'important');
+
+                    // Use setTimeout and offsetWidth to force the browser to recognize the 0 width
+                    setTimeout(() => {
+                        void target.offsetWidth; // Force a reflow
+                        target.style.setProperty('width', width, 'important');
+                    }, 100);
+
+                    salaryObserver.unobserve(target);
                 }
             });
         }, { threshold: 0.1 });
