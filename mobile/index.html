@@ -1696,6 +1696,7 @@
 </head>
 
 <body>
+
     <nav class="bottom-nav" id="bottomNav">
         <button class="nav-item active" data-page="home"><span class="material-symbols-rounded">home</span><span
                 class="nav-label">Home</span></button>
@@ -1712,7 +1713,6 @@
         <div class="page active" id="homePage">
             <section class="hero-section">
                 <div class="hero-content">
-                    <div class="brand-header">
                         <img src="https://www.snsgroups.com/sns.png" alt="SNS Groups Logo"
                             style="height: 52px; width: auto; object-fit: contain;">
                         <div style="display: flex; flex-direction: column; gap: 2px;">
@@ -2792,7 +2792,8 @@
             { title: 'SPINE', subtitle: 'snsspine.in', description: 'Student Activity Center. Youth leadership, clubs, events, and extracurricular activities hub.', url: 'https://snsspine.in/', icon: 'people', color: '#ec4899', bg: '#fdf2f8' },
             { title: 'SNS iHub', subtitle: 'snsihub.ai', description: 'Innovation & Incubation Hub. Startup support, AI/GenAI initiatives, and entrepreneurship ecosystem.', url: 'https://snsihub.ai/', icon: 'lightbulb', color: '#f59e0b', bg: '#fffbeb' },
             { title: 'IIPC Portal', subtitle: 'iipc.snsgroups.com', description: 'Industry partnerships, placement records, and corporate connections. Training & development programs.', url: 'https://iipc.snsgroups.com/', icon: 'business', color: '#06b6d4', bg: '#ecfeff', actionText: 'View Placements' },
-            { title: 'Helpdesk Portal', subtitle: 'helpdesk.snsgroups.com', description: 'Centralized support system for managing queries, resolving issues, and providing quick assistance across all SNS platforms.', url: 'https://helpdesk.snsgroups.com/', icon: 'fa-solid fa-headset', color: '#6366f1', bg: '#e0e7ff', actionText: 'Get Support' }
+            { title: 'Helpdesk Portal', subtitle: 'helpdesk.snsgroups.com', description: 'Centralized support system for managing queries, resolving issues, and providing quick assistance across all SNS platforms.', url: 'https://helpdesk.snsgroups.com/', icon: 'fa-solid fa-headset', color: '#6366f1', bg: '#e0e7ff', actionText: 'Get Support' },
+            { title: 'Mandatory Disclosure', subtitle: 'Transparency & Compliance', description: 'Official documents, legal information, and mandatory public disclosures as per CBSE / AICTE norms.', url: '#', icon: 'file_copy', color: '#b45309', bg: '#fffbeb', isDisclosure: true }
         ];
 
         function renderRecruiters() {
@@ -2815,8 +2816,10 @@
                         ? `<i class="${p.icon}" style="font-size: 24px; color:${p.color};"></i>`
                         : `<span class="material-symbols-rounded" style="color:${p.color};">${p.icon}</span>`;
 
+                    const onClickAction = p.isDisclosure ? `window.showDisclosure ? window.showDisclosure(event) : window.open('../mandatory-disclosure/index.html','_blank')` : `window.open('${p.url}','_blank')`;
+
                     return `
-                        <div class="portal-card" onclick="window.open('${p.url}','_blank')">
+                        <div class="portal-card" onclick="${onClickAction}">
                             <div class="portal-header">
                                 <div class="portal-icon" style="background:${p.bg}; color:${p.color};">
                                     ${iconHtml}

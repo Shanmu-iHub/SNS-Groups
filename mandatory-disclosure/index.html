@@ -12,6 +12,9 @@
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
   <link rel="icon" type="image/png" href="https://www.snsgroups.com/sns.png">
   <script>
     tailwind.config = {
@@ -141,6 +144,56 @@
       padding-left: 1rem;
       margin-bottom: 1.5rem;
       text-transform: uppercase;
+    }
+
+    /* Bottom Navigation for Mobile */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      display: none; /* hidden on desktop by default */
+      justify-content: space-around;
+      padding: 8px;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+      z-index: 10000;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 1023px) {
+      .bottom-nav {
+        display: flex;
+      }
+      body {
+        padding-bottom: 80px; /* space for the nav */
+      }
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 12px;
+      background: transparent;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: #64748b;
+    }
+
+    .nav-item.active {
+      background: rgba(30, 64, 175, 0.1);
+      color: #1e40af;
+    }
+    .material-symbols-rounded {
+      font-size: 24px;
+    }
+    .nav-label {
+      font-size: 10px;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -619,10 +672,20 @@
     function closeBanner() {
       const banner = document.getElementById('announcementBanner');
       const nav = document.getElementById('mainNav');
-      banner.style.display = 'none';
-      nav.style.top = '0';
+      if (banner) banner.style.display = 'none';
+      if (nav) nav.style.top = '0';
     }
   </script>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="../index.html" class="nav-item active"><span class="material-symbols-rounded">home</span><span class="nav-label">Home</span></a>
+    <a href="../index.html" class="nav-item"><span class="material-symbols-rounded">trending_up</span><span class="nav-label">Placements</span></a>
+    <a href="../index.html" class="nav-item"><span class="material-symbols-rounded">school</span><span class="nav-label">Programs</span></a>
+    <a href="../index.html" class="nav-item"><span class="material-symbols-rounded">lightbulb</span><span class="nav-label">Innovation</span></a>
+    <a href="../index.html" class="nav-item"><span class="material-symbols-rounded">apps</span><span class="nav-label">Portals</span></a>
+  </nav>
+
 </body>
 
 </html>

@@ -1911,7 +1911,6 @@
          ================================================================ -->
   <div id="desktop-view">
 
-
     <!-- Announcement Banner - Agentic AI Bootcamp -->
     <div id="global-header"></div>
 
@@ -4418,39 +4417,37 @@
         <!-- Events Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 mb-12">
 
-          <!-- Event 1 - Hostel Day - Boys -->
+          <!-- Event 0 - Global Conference -->
           <div
             class="scroll-animate bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all"
             style="transition-delay: 0.1s">
-            <div class="h-3 bg-gradient-to-r from-green-500 to-emerald-500"></div>
+            <div class="h-3 bg-gradient-to-r from-amber-500 to-orange-500"></div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-4">
-                <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">Hostel
-                  Event</span>
-                <span class="inline-flex items-center gap-1 px-3 py-1 bg-green-600 text-white rounded-full text-xs font-bold">&#10003; Completed</span>
+                <span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-semibold">Conference & Innovation Event</span>
+                <span class="inline-flex items-center gap-1 px-3 py-1 bg-blue-600 text-white rounded-full text-xs font-bold">&#10003; Upcoming</span>
               </div>
               <div class="flex items-center gap-3 mb-4">
-                <div class="text-center bg-green-50 rounded-xl p-3">
-                  <div class="text-2xl font-bold text-green-600">Apr 9</div>
-                  <div class="text-xs text-green-500">2026</div>
+                <div class="text-center bg-amber-50 rounded-xl p-3 min-w-[70px]">
+                  <div class="text-2xl font-bold text-amber-600">Sep 29</div>
+                  <div class="text-xs text-amber-500">2026</div>
                 </div>
                 <div>
                   <h3 class="text-xl font-bold text-gray-900"
-                    style="color: #008824; font-weight: 700; max-width: 100%;">
-                    Boys Hostel Day</h3>
-                  <p class="text-gray-500 text-sm">Brotherhood & Campus Life</p>
+                    style="color: #b45309; font-weight: 700; max-width: 100%;">
+                    Global Design Thinking Conference & International Hackathon 2026</h3>
+                  <p class="text-gray-500 text-sm">Chaos & Clarity – Driving Progress with Design Thinking</p>
                 </div>
               </div>
               <p class="text-gray-600 text-sm mb-4">
-                A vibrant day celebrating hostel life, camaraderie, and memorable moments. Students come together to showcase their talents and strengthen their bond through engaging activities.
+                A premier global gathering hosted by SNS Institutions, the official Indian Chapter of the Global Design Thinking Alliance (GDTA). This conference and international hackathon unite students, innovators, researchers, professionals, and global thought leaders to explore how design thinking can solve complex real-world challenges through creativity, collaboration, and innovation.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-2 py-1 bg-gray-100 rounded-full text-xs text-gray-600">Talent Showcase</span>
-                <span class="px-2 py-1 bg-gray-100 rounded-full text-xs text-gray-600">Fun Activities</span>
-                <span class="px-2 py-1 bg-gray-100 rounded-full text-xs text-gray-600">Bonding Moments</span>
-                <span class="px-2 py-1 bg-gray-100 rounded-full text-xs text-gray-600">Cultural Events</span>
+                <span class="px-2 py-1 bg-gray-100 rounded-full text-xs text-gray-600">Global Conference Sessions</span>
+                <span class="px-2 py-1 bg-gray-100 rounded-full text-xs text-gray-600">International Hackathon</span>
+                <span class="px-2 py-1 bg-gray-100 rounded-full text-xs text-gray-600">Design Thinking Workshops</span>
+                <span class="px-2 py-1 bg-gray-100 rounded-full text-xs text-gray-600">Innovation & Research Networking</span>
               </div>
-
             </div>
           </div>
 
@@ -6760,9 +6757,20 @@
     <div class="overlay-homepage-style">
 
 
-      <!-- Announcement Banner - Agentic AI Bootcamp -->
-      <div id="global-header"></div>
-      <div style="padding-top: 140px;">
+      <!-- Custom Header for Overlay -->
+      <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 10001; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 12px 20px; display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <img src="https://www.snsgroups.com/sns.png" alt="SNS Groups Logo" style="height: 40px; width: auto; object-fit: contain;">
+          <div style="display: flex; flex-direction: column; gap: 2px;">
+            <span style="font-size: 18px; font-weight: 800; color: #1e293b; margin: 0; line-height: 1.1;">SNS Institutions</span>
+            <span style="font-size: 9px; font-weight: 700; color: #f59e0b; margin: 0; text-transform: uppercase; letter-spacing: 1.5px;">Design Thinkers</span>
+          </div>
+        </div>
+        <button onclick="hideDisclosure()" style="background: #f1f5f9; border: none; font-size: 20px; color: #1e293b; cursor: pointer; padding: 8px 12px; border-radius: 8px; display: flex; align-items: center; gap: 6px;">
+          <i class="fas fa-times"></i> <span style="font-size: 14px; font-weight: 600;">Close</span>
+        </button>
+      </div>
+      <div style="padding-top: 80px;">
         <section class="py-16 bg-gray-50">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap justify-center gap-3 mb-12">
@@ -7994,10 +8002,10 @@
         <script>
           function showDisclosure(e) {
             if (e) e.preventDefault();
-            document.getElementById('disclosure-overlay').style.display = 'block';
-            document.body.style.overflow = 'hidden';
+            window.location.href = 'mandatory-disclosure/index.html';
           }
           function hideDisclosure() {
+            // Not used anymore since we redirect, but kept for compatibility
             document.getElementById('disclosure-overlay').style.display = 'none';
             document.body.style.overflow = 'auto';
           }
