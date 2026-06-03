@@ -82,16 +82,24 @@
     .disc-table-container {
       background: white;
       border-radius: 16px;
-      overflow: hidden;
+      overflow-x: auto;
+      overflow-y: visible;
       border: 1px solid #e2e8f0;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
       margin-bottom: 2rem;
+      -webkit-overflow-scrolling: touch;
     }
 
     .disc-table {
       width: 100%;
+      min-width: 560px; /* ensures table doesn't collapse on mobile */
       border-collapse: collapse;
       font-family: 'Inter', sans-serif;
+    }
+
+    /* Ensure Tailwind overflow-x-auto wrappers also have scrollable tables */
+    .overflow-x-auto table {
+      min-width: 560px;
     }
 
     .disc-table th {
@@ -195,6 +203,40 @@
       font-size: 10px;
       font-weight: 600;
     }
+
+    /* Horizontal scrollable tab bar on mobile */
+    .tab-scroll-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 767px) {
+      .tab-scroll-container {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding: 8px 16px 12px;
+        gap: 10px;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        /* Hide scrollbar */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      .tab-scroll-container::-webkit-scrollbar {
+        display: none;
+      }
+      .tab-scroll-container .tab-btn {
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        white-space: nowrap;
+      }
+    }
   </style>
 </head>
 
@@ -244,15 +286,13 @@
   <!-- Main Content -->
   <section class="py-24 bg-gray-50 pb-[100px]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-wrap justify-center gap-3 mb-12 scroll-animate visible">
+      <div class="tab-scroll-container scroll-animate visible">
         <button data-tab="k12"
           class="tab-btn active px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">K-12</button>
         <button data-tab="engineering"
-          class="tab-btn px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 bg-gray-200 hover:bg-gray-300">Engineering
-          & Tech</button>
+          class="tab-btn px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 bg-gray-200 hover:bg-gray-300">Engineering &amp; Tech</button>
         <button data-tab="arts"
-          class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Arts
-          & Science</button>
+          class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Arts &amp; Science</button>
         <button data-tab="paramedical"
           class="tab-btn bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300">Paramedical</button>
         <button data-tab="education"
@@ -371,6 +411,27 @@
             </table>
           </div>
         </div>
+        <div class="scroll-animate visible mt-12">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-amber-500 pl-4 uppercase">C. Compliance</h3>
+          <div class="overflow-x-auto rounded-2xl border border-amber-200 shadow-lg bg-white">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-amber-500 text-white">
+                  <th class="px-6 py-4 text-xs font-bold border-b border-amber-200 w-24 uppercase">SL NO.</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-amber-200 uppercase">COMPLIANCE DOCUMENTS/INFORMATION</th>
+                  <th class="px-6 py-4 text-xs font-bold border-b border-amber-200 uppercase">LINKS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-amber-50/30 transition-colors bg-white">
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium">1</td>
+                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 uppercase font-medium">Compliance Document Example</td>
+                  <td class="px-6 py-4 text-sm border-b border-gray-100"><a href="#" class="text-amber-700 font-bold uppercase inline-flex items-center gap-2"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
       <!-- Engineering & Tech Content -->
@@ -482,6 +543,112 @@
             </table>
           </div>
         </div>
+        <div class="scroll-animate visible mt-12">
+          <h3 class="disc-section-title" style="border-left-color: #f59e0b;">C. Compliance</h3>
+          <div class="disc-table-container">
+            <table class="disc-table">
+              <thead>
+                <tr>
+                  <th class="w-24" style="background:#f59e0b;">SL NO.</th>
+                  <th style="background:#f59e0b;">COMPLIANCE DOCUMENTS/INFORMATION</th>
+                  <th style="background:#f59e0b;">LINKS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>ARC CONSTITUTION</td>
+                  <td><a href="../Complaince/SNSCT/2.%20ARC%20constitution.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>ESTABLISHMENT OF GRC 2025-26</td>
+                  <td><a href="../Complaince/SNSCT/3.%20Establishment%20of%20GRC%202025-26.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>INTERNAL COMPLAINT COMMITTEE</td>
+                  <td><a href="../Complaince/SNSCT/4.Internal%20Complaint%20Committee.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>SC-ST COMMITTEE MEMBERS</td>
+                  <td><a href="../Complaince/SNSCT/E%20-%205.%20SC-ST%20Committee%20Members%20-%20Signed.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>CONSTITUTION OF GOVERNING COUNCIL</td>
+                  <td><a href="../Complaince/SNSCT/Constitution%20of%20Governing%20Council-2021-24-set%201.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>GC MINUTES</td>
+                  <td><a href="../Complaince/SNSCT/GC%20Minutes.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>ACADEMIC COUNCIL CONSTITUTION</td>
+                  <td><a href="../Complaince/SNSCT/Academic%20Council%20Constitution.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>AC MINUTES</td>
+                  <td><a href="../Complaince/SNSCT/AC%20Minutes.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>CONSTITUTION OF FINANCE COMMITTEE</td>
+                  <td><a href="../Complaince/SNSCT/Constitution%20of%20Finance%20Committee%20.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>CONSTITUTION OF EXAMINATION COMMITTEE</td>
+                  <td><a href="../Complaince/SNSCT/Constitution%20of%20Examination%20Committee.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>BOS MEMBERS - ALL DEPARTMENT</td>
+                  <td><a href="../Complaince/SNSCT/BOS%20members%20-%20All%20Department%20.doc" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>PLANNING & MONITORING COMMITTEE</td>
+                  <td><a href="../Complaince/SNSCT/Planning%20%26%20Monitoring%20Committee.PDF" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>DISCIPLINE AND WELFARE COMMITTEE</td>
+                  <td><a href="../Complaince/SNSCT/Discipline%20and%20Welfare%20Committee.PDF" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>LIBRARY ADVISORY COMMITTEE</td>
+                  <td><a href="../Complaince/SNSCT/Library%20Advisory%20Committee.PDF" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>ANTI RAGGING UNDERTAKING FORM</td>
+                  <td><a href="../Complaince/SNSCT/Anti%20Ragging%20Undertaking%20Form%20(1).pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>FULL POLICY</td>
+                  <td><a href="../Complaince/SNSCT/Full%20Policy.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td>ORGANIZATIONAL CHART</td>
+                  <td><a href="../Complaince/SNSCT/Organizational%20Chart.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>STRATEGY PLAN</td>
+                  <td><a href="../Complaince/SNSCT/Strategy%20Plan.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
       <!-- Arts & Science Content -->
@@ -575,26 +742,57 @@
             </table>
           </div>
         </div>
-      </div>
-
-      <!-- Paramedical Content -->
-      <div id="content-paramedical" class="tab-content-wrapper hidden">
-        <div class="scroll-animate visible mb-16">
-          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General
-            Information - Paramedical</h3>
-          <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
-            <table class="w-full text-left border-collapse">
+        <div class="scroll-animate visible mt-12">
+          <h3 class="disc-section-title" style="border-left-color: #f59e0b;">C. Compliance</h3>
+          <div class="disc-table-container">
+            <table class="disc-table">
               <thead>
-                <tr class="bg-[#1e40af] text-white">
-                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 w-24 uppercase">SL NO.</th>
-                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">INFORMATION</th>
-                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">DETAILS</th>
+                <tr>
+                  <th class="w-24" style="background:#f59e0b;">SL NO.</th>
+                  <th style="background:#f59e0b;">COMPLIANCE DOCUMENTS/INFORMATION</th>
+                  <th style="background:#f59e0b;">LINKS</th>
                 </tr>
               </thead>
               <tbody>
-                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium text-center"
-                    colspan="3">Paramedical details will be updated here</td>
+                <tr>
+                  <td>1</td>
+                  <td>ANTI RAGGING COMMITTEE</td>
+                  <td><a href="../Complaince/Arts/Anti%20Ragging%20Committee.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>INTERNAL COMPLAINTS COMMITTEE (ICC)</td>
+                  <td><a href="../Complaince/Arts/Internal%20Complaints%20Committee%20(ICC).pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>MINORITY CELL</td>
+                  <td><a href="../Complaince/Arts/MINORITY%20CELL.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>PREVENTION OF SEXUAL HARASSMENT CELL</td>
+                  <td><a href="../Complaince/Arts/Prevention%20of%20Sexual%20Harassment%20Cell.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>SC-ST COMMITTEE</td>
+                  <td><a href="../Complaince/Arts/SC-ST%20Committee.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>STUDENTS GRIEVANCE REDRESSAL COMMITTEE (SGRC) - OMBUDSMAN</td>
+                  <td><a href="../Complaince/Arts/Students%20Grievance%20Redressal%20Committee%20(SGRC)%20-%20Ombudsman.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>STUDENTS GRIEVANCE REDRESSAL COMMITTEE (SGRC)</td>
+                  <td><a href="../Complaince/Arts/Students%20Grievance%20Redressal%20Committee%20(SGRC).pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>WOMEN EMPOWERMENT CELL</td>
+                  <td><a href="../Complaince/Arts/Women%20Empowerment%20Cell.pdf" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
                 </tr>
               </tbody>
             </table>
@@ -602,28 +800,303 @@
         </div>
       </div>
 
-      <!-- Education Content -->
-      <div id="content-education" class="tab-content-wrapper hidden">
-        <div class="scroll-animate visible mb-16">
-          <h3 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4 uppercase">A. General
-            Information - Education</h3>
-          <div class="overflow-x-auto rounded-2xl border border-blue-200 shadow-lg bg-white">
-            <table class="w-full text-left border-collapse">
+      <!-- Paramedical Content -->
+      <div id="content-paramedical" class="tab-content-wrapper hidden">
+        <!-- Sub Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8 bg-blue-50/50 p-4 rounded-3xl border border-blue-100 shadow-sm">
+          <button onclick="switchParaSubTab('pharmacy')" id="para-btn-pharmacy"
+            class="para-sub-btn px-4 py-2 rounded-xl text-xs font-bold transition-all"
+            style="background:#1e40af;color:white;">Pharmacy</button>
+          <button onclick="switchParaSubTab('nursing')" id="para-btn-nursing"
+            class="para-sub-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-blue-600 border border-blue-200">Nursing</button>
+          <button onclick="switchParaSubTab('allied')" id="para-btn-allied"
+            class="para-sub-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-blue-600 border border-blue-200">Allied Health</button>
+          <button onclick="switchParaSubTab('physio')" id="para-btn-physio"
+            class="para-sub-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-blue-600 border border-blue-200">Physiotherapy</button>
+        </div>
+
+        <!-- Pharmacy -->
+        <div id="para-sub-pharmacy" class="para-sub-content">
+          <h3 class="disc-section-title">A. General Information – SNS COLLEGE OF PHARMACY AND HEALTH SCIENCES</h3>
+          <div class="disc-table-container"><table class="disc-table"><thead><tr><th>SL NO.</th><th>INFORMATION</th><th>DETAILS</th></tr></thead><tbody>
+            <tr><td>1</td><td>NAME OF THE INSTITUTION</td><td>SNS COLLEGE OF PHARMACY AND HEALTH SCIENCES</td></tr>
+            <tr><td>2</td><td>AFFILIATION</td><td>The Tamil Nadu Dr.M.G.R Medical University, Chennai</td></tr>
+            <tr><td>3</td><td>MGR UNIVERSITY INSTITUTION CODE</td><td>817</td></tr>
+            <tr><td>4</td><td>COMPLETE ADDRESS</td><td>SNS Kalvi Nagar, Sathy Main Road (NH-209), Coimbatore - 641035, Tamil Nadu</td></tr>
+            <tr><td>5</td><td>PRINCIPAL / DEAN</td><td>Dr.S.Sathesh Kumar</td></tr>
+            <tr><td>6</td><td>QUALIFICATION</td><td>Ph.D., M.Sc., (Relevant Clinical Domain)</td></tr>
+            <tr><td>7</td><td>OFFICE EMAIL ID</td><td>office@snscphs.org</td></tr>
+            <tr><td>8</td><td>CONTACT DETAILS</td><td>90036 55855</td></tr>
+          </tbody></table></div>
+          <h3 class="disc-section-title">B. Documents and Information</h3>
+          <div class="disc-table-container"><table class="disc-table"><thead><tr><th>SL NO.</th><th>DOCUMENTS/INFORMATION</th><th>LINKS</th></tr></thead><tbody>
+            <tr><td>1</td><td>Copies of Affiliation/Upgradation Letter and Recent Extension of Affiliation</td><td><a href="https://snscphs.org/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>2</td><td>Copy of Valid Fire Safety Certificate</td><td><a href="https://snscphs.org/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+          </tbody></table></div>
+        
+        <div class="scroll-animate visible mt-12">
+          <h3 class="disc-section-title" style="border-left-color: #f59e0b;">C. Compliance</h3>
+          <div class="disc-table-container">
+            <table class="disc-table">
               <thead>
-                <tr class="bg-[#1e40af] text-white">
-                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 w-24 uppercase">SL NO.</th>
-                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">INFORMATION</th>
-                  <th class="px-6 py-4 text-xs font-bold border-b border-blue-200 uppercase">DETAILS</th>
+                <tr>
+                  <th class="w-24" style="background:#f59e0b;">SL NO.</th>
+                  <th style="background:#f59e0b;">COMPLIANCE DOCUMENTS/INFORMATION</th>
+                  <th style="background:#f59e0b;">LINKS</th>
                 </tr>
               </thead>
               <tbody>
-                <tr class="hover:bg-blue-50/30 transition-colors bg-white">
-                  <td class="px-6 py-4 text-sm text-gray-700 border-b border-gray-100 font-medium text-center"
-                    colspan="3">Education details will be updated here</td>
+                <tr>
+                  <td>1</td>
+                  <td>ANTI-RAGGING COMMITTEE 26-27 (1)</td>
+                  <td><a href="../Complaince/Pharmacy/1%20antiragging%20commitee%2026-27.docx" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>ANTI-RAGGING SQUAD 26-27</td>
+                  <td><a href="../Complaince/Pharmacy/2%20antiragging%20squd%2026-27.docx" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>ANTI-DISCRIMINATION CELL 2026-2027</td>
+                  <td><a href="../Complaince/Pharmacy/4%20Anti%20%E2%80%93%20Discrimination%20Cell%202026-2027.docx" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>GOVERNING BODY (GB)</td>
+                  <td><a href="../Complaince/Pharmacy/5%20GB.docx" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>INTERNAL COMPLAINTS COMMITTEE (ICC)</td>
+                  <td><a href="../Complaince/Pharmacy/6%20ICC.docx" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>GRIEVANCE REDRESSAL CELL 26-27 (SGRCC)</td>
+                  <td><a href="../Complaince/Pharmacy/7%20grivence%20redressel%20cell%2026-27%20sgrcc.docx" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>ANTI-RAGGING COMMITTEE 26-27 (2)</td>
+                  <td><a href="../Complaince/Pharmacy/Antiragging%20commitee%2026-27.docx" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>GENDER SENSITIZATION WOMAN PROTECTION CELL</td>
+                  <td><a href="../Complaince/Pharmacy/GENDER%20SENSITIZATION%20WOMAN%20PROTECTION%20CELL.docx" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
                 </tr>
               </tbody>
             </table>
           </div>
+        </div>
+        </div>
+
+        <!-- Nursing -->
+        <div id="para-sub-nursing" class="para-sub-content" style="display:none;">
+          <h3 class="disc-section-title">A. General Information – SNS COLLEGE OF NURSING</h3>
+          <div class="disc-table-container"><table class="disc-table"><thead><tr><th>SL NO.</th><th>INFORMATION</th><th>DETAILS</th></tr></thead><tbody>
+            <tr><td>1</td><td>NAME OF THE INSTITUTION</td><td>SNS COLLEGE OF NURSING</td></tr>
+            <tr><td>2</td><td>AFFILIATION</td><td>The Tamil Nadu Dr. M.G.R. Medical University, Chennai</td></tr>
+            <tr><td>3</td><td>MGR UNIVERSITY INSTITUTION CODE</td><td>879</td></tr>
+            <tr><td>4</td><td>COMPLETE ADDRESS</td><td>SNS Kalvi Nagar, Sathy Main Road (NH-209), Saravanampatti Post, Coimbatore - 641 035, Tamil Nadu</td></tr>
+            <tr><td>5</td><td>PRINCIPAL</td><td>Dr. Leena</td></tr>
+            <tr><td>6</td><td>QUALIFICATION</td><td>M.sc.(N)., Ph.D.(N)</td></tr>
+            <tr><td>7</td><td>OFFICE EMAIL ID</td><td>snsnursing@snsgroups.com</td></tr>
+            <tr><td>8</td><td>CONTACT DETAILS</td><td>90036 55855</td></tr>
+          </tbody></table></div>
+          <h3 class="disc-section-title">B. Documents and Information</h3>
+          <div class="disc-table-container"><table class="disc-table"><thead><tr><th>SL NO.</th><th>DOCUMENTS/INFORMATION</th><th>LINKS</th></tr></thead><tbody>
+            <tr><td>1</td><td>Valid Fire Safety Certificate 2024-2025</td><td><a href="https://snscnursing.org/pages/mandatory-disclosure.html" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>2</td><td>Building Stability Certificate</td><td><a href="https://snscnursing.org/pages/mandatory-disclosure.html" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>3</td><td>Building Completion Certificate</td><td><a href="https://snscnursing.org/pages/mandatory-disclosure.html" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>4</td><td>Fire Safety Renewal Certificate</td><td><a href="https://snscnursing.org/pages/mandatory-disclosure.html" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>5</td><td>Health and Sanitary Certificate</td><td><a href="https://snscnursing.org/pages/mandatory-disclosure.html" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>6</td><td>Indian Nursing Council (INC) Recognition 2025-2026</td><td><a href="https://snscnursing.org/pages/mandatory-disclosure.html" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>7</td><td>Tamil Nadu Nurses and Midwives Council (TNNMC) Recognition 2025-2026</td><td><a href="https://snscnursing.org/pages/mandatory-disclosure.html" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>8</td><td>TNMGRMU Certificate of Registration (COR)</td><td><a href="https://snscnursing.org/pages/mandatory-disclosure.html" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+          </tbody></table></div>
+        
+        <div class="scroll-animate visible mt-12">
+          <h3 class="disc-section-title" style="border-left-color: #f59e0b;">C. Compliance</h3>
+          <div class="disc-table-container">
+            <table class="disc-table">
+              <thead>
+                <tr>
+                  <th class="w-24" style="background:#f59e0b;">SL NO.</th>
+                  <th style="background:#f59e0b;">COMPLIANCE DOCUMENTS/INFORMATION</th>
+                  <th style="background:#f59e0b;">LINKS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>COMPLIANCE DOCUMENT EXAMPLE</td>
+                  <td><a href="#" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+
+        <!-- Allied Health -->
+        <div id="para-sub-allied" class="para-sub-content" style="display:none;">
+          <h3 class="disc-section-title">A. General Information – SNS COLLEGE OF ALLIED HEALTH SCIENCE</h3>
+          <div class="disc-table-container"><table class="disc-table"><thead><tr><th>SL NO.</th><th>INFORMATION</th><th>DETAILS</th></tr></thead><tbody>
+            <tr><td>1</td><td>NAME OF THE INSTITUTION</td><td>SNS College of Allied Health Science</td></tr>
+            <tr><td>2</td><td>AFFILIATION</td><td>The Tamil Nadu Dr.MGR Medical University, Chennai</td></tr>
+            <tr><td>3</td><td>MGR UNIVERSITY INSTITUTION CODE</td><td>A0701</td></tr>
+            <tr><td>4</td><td>COMPLETE ADDRESS</td><td>SNS Kalvi Nagar, Sathy Main Road (NH-209), Coimbatore - 641035, Tamil Nadu</td></tr>
+            <tr><td>5</td><td>PRINCIPAL / DEAN</td><td>Prof. Sumathy R</td></tr>
+            <tr><td>6</td><td>QUALIFICATION</td><td>M.Sc.,</td></tr>
+            <tr><td>7</td><td>OFFICE EMAIL ID</td><td>office@snscahs.org</td></tr>
+            <tr><td>8</td><td>CONTACT DETAILS</td><td>90036 55855</td></tr>
+          </tbody></table></div>
+          <h3 class="disc-section-title">B. Documents and Information</h3>
+          <div class="disc-table-container"><table class="disc-table"><thead><tr><th>SL NO.</th><th>DOCUMENTS/INFORMATION</th><th>LINKS</th></tr></thead><tbody>
+            <tr><td>1</td><td>Copies of Affiliation/Upgradation Letter and Recent Extension of Affiliation</td><td><a href="https://snscahs.org/pages/mandatory-disclosure.html" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>2</td><td>Copy of Valid Building Safety Certificate</td><td><a href="https://snscahs.org/pages/mandatory-disclosure.html" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>3</td><td>Copy of Valid Fire Safety Certificate</td><td><a href="https://snscahs.org/pages/mandatory-disclosure.html" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>4</td><td>Copy of Structural Stability Certificate</td><td><a href="https://snscahs.org/pages/mandatory-disclosure.html" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>5</td><td>Copies of Valid Water, Health and Sanitation Certificates</td><td><a href="https://snscahs.org/pages/mandatory-disclosure.html" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+          </tbody></table></div>
+        
+        <div class="scroll-animate visible mt-12">
+          <h3 class="disc-section-title" style="border-left-color: #f59e0b;">C. Compliance</h3>
+          <div class="disc-table-container">
+            <table class="disc-table">
+              <thead>
+                <tr>
+                  <th class="w-24" style="background:#f59e0b;">SL NO.</th>
+                  <th style="background:#f59e0b;">COMPLIANCE DOCUMENTS/INFORMATION</th>
+                  <th style="background:#f59e0b;">LINKS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>ANTI RAGGING AHS MEMBERS 2026</td>
+                  <td><a href="../Complaince/Allied/anti%20ragging%20ahs%20members%202026.docx" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+
+        <!-- Physiotherapy -->
+        <div id="para-sub-physio" class="para-sub-content" style="display:none;">
+          <h3 class="disc-section-title">A. General Information – SNS COLLEGE OF PHYSIOTHERAPY</h3>
+          <div class="disc-table-container"><table class="disc-table"><thead><tr><th>SL NO.</th><th>INFORMATION</th><th>DETAILS</th></tr></thead><tbody>
+            <tr><td>1</td><td>NAME OF THE INSTITUTION</td><td>SNS COLLEGE OF PHYSIOTHERAPY</td></tr>
+            <tr><td>2</td><td>AFFILIATION</td><td>The Tamil Nadu Dr.MGR Medical University, Chennai</td></tr>
+            <tr><td>3</td><td>COLLEGE CODE</td><td>864</td></tr>
+            <tr><td>4</td><td>COMPLETE ADDRESS</td><td>SNS Kalvi Nagar, Sathy Main Road (NH-209), Kurumbapalayam (Po), Coimbatore – 641 107, Tamil Nadu</td></tr>
+            <tr><td>5</td><td>PRINCIPAL / DEAN</td><td>Abia Christy Emmanuvel</td></tr>
+            <tr><td>6</td><td>QUALIFICATION</td><td>M.P.T.</td></tr>
+            <tr><td>7</td><td>OFFICE EMAIL ID</td><td>snsphysio@gmail.com</td></tr>
+            <tr><td>8</td><td>CONTACT DETAILS</td><td>90036 55855</td></tr>
+          </tbody></table></div>
+          <h3 class="disc-section-title">B. Documents and Information</h3>
+          <div class="disc-table-container"><table class="disc-table"><thead><tr><th>SL NO.</th><th>DOCUMENTS/INFORMATION</th><th>LINKS</th></tr></thead><tbody>
+            <tr><td>1</td><td>Copy of Certified Public Accountant 2024-25</td><td><a href="https://snscphysio.org/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>2</td><td>Copy of Valid Fire Safety Certificate</td><td><a href="https://snscphysio.org/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>3</td><td>Copy of Valid Sanitary Certificate</td><td><a href="https://snscphysio.org/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>4</td><td>Copy of Building License</td><td><a href="https://snscphysio.org/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>5</td><td>Copy of FORM-D License</td><td><a href="https://snscphysio.org/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>6</td><td>Copy of Health and Family Welfare</td><td><a href="https://snscphysio.org/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+          </tbody></table></div>
+        
+        <div class="scroll-animate visible mt-12">
+          <h3 class="disc-section-title" style="border-left-color: #f59e0b;">C. Compliance</h3>
+          <div class="disc-table-container">
+            <table class="disc-table">
+              <thead>
+                <tr>
+                  <th class="w-24" style="background:#f59e0b;">SL NO.</th>
+                  <th style="background:#f59e0b;">COMPLIANCE DOCUMENTS/INFORMATION</th>
+                  <th style="background:#f59e0b;">LINKS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>ANTI RAGGING</td>
+                  <td><a href="../Complaince/Pysio/Anti%20Ragging.docx" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>DISCIPLINARY ACTION COMMITTEE</td>
+                  <td><a href="../Complaince/Pysio/Disciplinary%20Action%20Committee.docx" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>ICC</td>
+                  <td><a href="../Complaince/Pysio/ICC.docx" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>STUDENT GRIEVANCES REDRESSAL COMMITTEE</td>
+                  <td><a href="../Complaince/Pysio/STUDENT%20GRIEVANCES%20REDRESSAL%20COMMITTEE.docx" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-word"></i> View Document</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Education Content -->
+      <div id="content-education" class="tab-content-wrapper hidden">
+        <div class="scroll-animate visible mb-16">
+          <h3 class="disc-section-title">A. General Information – DR. SNS COLLEGE OF EDUCATION</h3>
+          <div class="disc-table-container"><table class="disc-table"><thead><tr><th>SL NO.</th><th>INFORMATION</th><th>DETAILS</th></tr></thead><tbody>
+            <tr><td>1</td><td>NAME OF THE COLLEGE</td><td>DR. SNS COLLEGE OF EDUCATION</td></tr>
+            <tr><td>2</td><td>AFFILIATION NO.</td><td>1930610</td></tr>
+            <tr><td>3</td><td>COLLEGE CODE</td><td>55513</td></tr>
+            <tr><td>4</td><td>COMPLETE ADDRESS</td><td>538, Thudiyalur-Saravanampatti Road, Vellakinar Post, Coimbatore - 641029, Tamil Nadu</td></tr>
+            <tr><td>5</td><td>PRINCIPAL NAME</td><td>Dr. A. Mary Noya Leena</td></tr>
+            <tr><td>6</td><td>PRINCIPAL QUALIFICATION</td><td>M.Sc., M.Ed., Ph.D.</td></tr>
+            <tr><td>7</td><td>COLLEGE EMAIL ID</td><td>office@drsnsce.edu.in</td></tr>
+            <tr><td>8</td><td>CONTACT DETAILS</td><td>90036 55855</td></tr>
+          </tbody></table></div>
+        </div>
+        <div class="scroll-animate visible">
+          <h3 class="disc-section-title">B. Documents and Information</h3>
+          <div class="disc-table-container"><table class="disc-table"><thead><tr><th>SL NO.</th><th>DOCUMENTS/INFORMATION</th><th>LINKS</th></tr></thead><tbody>
+            <tr><td>1</td><td>Copy of First Order Of Recognition</td><td><a href="https://drsnsce.edu.in/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>2</td><td>Copy of First Affiliation Order – Bharathiar University</td><td><a href="https://drsnsce.edu.in/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>3</td><td>Copy of Revised Recognition Order (As per NCTE 2014 Norms)</td><td><a href="https://drsnsce.edu.in/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>4</td><td>Copy of First Affiliation Order – Tamil Nadu Teachers Education University</td><td><a href="https://drsnsce.edu.in/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>5</td><td>Copy of Continuous Provisional Affiliation Orders – TNTEU</td><td><a href="https://drsnsce.edu.in/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>6</td><td>Copy of Recognition under Section 2(f) of UGC Act, 1956</td><td><a href="https://drsnsce.edu.in/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>7</td><td>Copy of Accreditation Certificate</td><td><a href="https://drsnsce.edu.in/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>8</td><td>Copy of Fire Safety Certificate / NOC</td><td><a href="https://drsnsce.edu.in/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+            <tr><td>9</td><td>Copy of Sanitary Certificate</td><td><a href="https://drsnsce.edu.in/mandatory-disclosure/" target="_blank" class="disc-link"><i class="fas fa-file-pdf"></i> View Document</a></td></tr>
+          </tbody></table></div>
+        
+        <div class="scroll-animate visible mt-12">
+          <h3 class="disc-section-title" style="border-left-color: #f59e0b;">C. Compliance</h3>
+          <div class="disc-table-container">
+            <table class="disc-table">
+              <thead>
+                <tr>
+                  <th class="w-24" style="background:#f59e0b;">SL NO.</th>
+                  <th style="background:#f59e0b;">COMPLIANCE DOCUMENTS/INFORMATION</th>
+                  <th style="background:#f59e0b;">LINKS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>COMPLIANCE DOCUMENT EXAMPLE</td>
+                  <td><a href="#" target="_blank" class="disc-link" style="color:#d97706;"><i class="fas fa-file-pdf"></i> View Document</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
         </div>
       </div>
     </div>
@@ -634,13 +1107,13 @@
     <script src="../components/loader.js"></script>
 
   <script>
-    // Mobile Menu Toggle
+    // Mobile Menu Toggle (guard: element may not exist on this standalone page)
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
 
-
-    // Program Category Tabs
     // Program Category Tabs
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabWrappers = document.querySelectorAll('.tab-content-wrapper');
@@ -649,22 +1122,36 @@
       btn.addEventListener('click', () => {
         const targetTab = btn.getAttribute('data-tab');
 
-        // Update Buttons
+        // Update button styles
         tabBtns.forEach(b => {
-          b.classList.remove('active', 'bg-blue-600', 'text-white');
+          b.classList.remove('active');
           b.classList.add('bg-gray-200', 'text-gray-700');
+          b.style.background = '';
+          b.style.color = '';
         });
         btn.classList.add('active');
         btn.classList.remove('bg-gray-200', 'text-gray-700');
+        btn.style.background = 'linear-gradient(135deg, #1e40af 0%, #7c3aed 100%)';
+        btn.style.color = 'white';
 
-        // Update Content
+        // Show matching content
         tabWrappers.forEach(wrapper => {
-          if (wrapper.id === `content-${targetTab}`) {
+          if (wrapper.id === 'content-' + targetTab) {
             wrapper.classList.remove('hidden');
           } else {
             wrapper.classList.add('hidden');
           }
         });
+
+        // Scroll to the active content section
+        setTimeout(() => {
+          const activeContent = document.getElementById('content-' + targetTab);
+          if (activeContent) {
+            const offset = 80; // account for fixed header
+            const top = activeContent.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
+        }, 50);
       });
     });
 
@@ -674,6 +1161,26 @@
       const nav = document.getElementById('mainNav');
       if (banner) banner.style.display = 'none';
       if (nav) nav.style.top = '0';
+    }
+
+    // Paramedical Sub-Tabs
+    function switchParaSubTab(key) {
+      document.querySelectorAll('.para-sub-content').forEach(c => c.style.display = 'none');
+      const target = document.getElementById('para-sub-' + key);
+      if (target) target.style.display = 'block';
+
+      document.querySelectorAll('.para-sub-btn').forEach(btn => {
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.classList.remove('text-white');
+        btn.classList.add('bg-white', 'text-blue-600');
+      });
+      const activeBtn = document.getElementById('para-btn-' + key);
+      if (activeBtn) {
+        activeBtn.style.background = '#1e40af';
+        activeBtn.style.color = 'white';
+        activeBtn.classList.remove('bg-white', 'text-blue-600');
+      }
     }
   </script>
 

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transport & Hostel | SNS Institutions</title>
+  <meta name="description"
+    content="Safe, comfortable, and punctual transportation for students across Coimbatore.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://www.snsgroups.com/sns.png">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            sns: {
+              primary: '#1e40af',
+              secondary: '#7c3aed',
+              accent: '#f59e0b',
+              dark: '#0f172a',
+              light: '#f8fafc'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    .scroll-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-amber-50/30 text-gray-800">
+
+  <!-- Header -->
+  <div id="global-header"></div>
+
+  <!-- Hero Section -->
+  <section class="relative pt-[140px] pb-24 bg-gray-900 overflow-hidden min-h-[50vh] flex flex-col justify-center">
+    <div class="absolute inset-0 z-0 opacity-40">
+      <img src="https://images.unsplash.com/photo-1557223562-6c77ef161f5d?auto=format&fit=crop&q=80" alt="Buses" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 z-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
+        Home <i class="fas fa-chevron-right text-[10px] mx-2"></i> Transport
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
+        Transport Services
+      </h1>
+      <p class="text-xl text-gray-200 max-w-2xl mx-auto font-medium">
+        Safe, comfortable, and punctual transportation for students
+      </p>
+      <div class="w-16 h-1 bg-amber-500 mx-auto mt-8 rounded-full"></div>
+    </div>
+  </section>
+
+  <!-- Why Parents Trust -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Transport?</h2>
+        <p class="text-gray-500 font-medium">Extensive fleet covering major areas of Coimbatore</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 scroll-animate delay-100">
+        <!-- Card 1 -->
+        <div class="bg-red-50/50 rounded-3xl p-8 text-center border border-red-100 transition-transform hover:-translate-y-1">
+          <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
+            <i class="fas fa-bus text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">20 Buses</h3>
+          <p class="text-sm text-gray-500">Full fleet of air-conditioned buses</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-green-50/50 rounded-3xl p-8 text-center border border-green-100 transition-transform hover:-translate-y-1">
+          <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
+            <i class="fas fa-map-location-dot text-2xl text-green-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">GPS Tracking</h3>
+          <p class="text-sm text-gray-500">Real-time location monitoring</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-orange-50/50 rounded-3xl p-8 text-center border border-orange-100 transition-transform hover:-translate-y-1">
+          <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
+            <i class="fas fa-shield-halved text-2xl text-purple-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">RFID Cards</h3>
+          <p class="text-sm text-gray-500">Safe boarding system</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="bg-red-50/50 rounded-3xl p-8 text-center border border-red-100 transition-transform hover:-translate-y-1">
+          <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
+            <i class="fas fa-snowflake text-2xl text-orange-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Air Conditioned</h3>
+          <p class="text-sm text-gray-500">All buses fully AC</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bus Route Coverage -->
+  <section class="py-20 bg-amber-50/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Bus Route Coverage Areas</h2>
+        <p class="text-gray-500 font-medium mb-2">We cover major areas across Coimbatore</p>
+        <p class="text-orange-600 font-medium text-sm"><i class="fas fa-bell mr-1"></i> Check if your area is covered before admission!</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 scroll-animate">
+        <!-- Central & South -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <h3 class="text-xl font-bold text-blue-600 mb-6 flex items-center gap-2">
+            <i class="fas fa-location-dot"></i> Central & South
+          </h3>
+          <ul class="space-y-4 text-sm font-medium text-gray-700">
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Ram Nagar & Gandhipuram</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Sivananda Colony & Tatabad</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Rathinapuri & Sanganoor</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Ramanathapuram & S Corner</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Race Course & Town Hall</li>
+          </ul>
+        </div>
+        <!-- North & East -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <h3 class="text-xl font-bold text-purple-600 mb-6 flex items-center gap-2">
+            <i class="fas fa-location-dot"></i> North & East
+          </h3>
+          <ul class="space-y-4 text-sm font-medium text-gray-700">
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Saravanampatti & Ganapathy</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Kurumbapalayam & Keeranam</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> CHIL SEZ & Athipalayam</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Amman Kovil & Kovilpalayam</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Karumbapalayam & NGGO Colony</li>
+          </ul>
+        </div>
+        <!-- Western Coimbatore -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <h3 class="text-xl font-bold text-green-600 mb-6 flex items-center gap-2">
+            <i class="fas fa-location-dot"></i> Western Coimbatore
+          </h3>
+          <ul class="space-y-4 text-sm font-medium text-gray-700">
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Vadavalli & Kanuvai</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Thudiyalur & Kavundampalayam</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Velandipalayam & Edaiyarpalayam</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> TVS Nagar & Maruthamalai</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Mullai Nagar & Pannimadai</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Extended Routes Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 scroll-animate">
+        <!-- Central -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 border-t-4 border-t-blue-500">
+          <h3 class="font-bold text-blue-600 mb-4 flex items-center gap-2 text-sm"><i class="fas fa-location-dot"></i> Central Coimbatore</h3>
+          <ul class="space-y-3 text-xs font-medium text-gray-700">
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Gandhipuram</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Saibaba Colony</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Lakshmi Mills</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Cross Cut Road</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Town Hall</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Ukkadam</li>
+          </ul>
+        </div>
+        <!-- East -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 border-t-4 border-t-yellow-500">
+          <h3 class="font-bold text-yellow-600 mb-4 flex items-center gap-2 text-sm"><i class="fas fa-location-dot"></i> East Coimbatore</h3>
+          <ul class="space-y-3 text-xs font-medium text-gray-700">
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Peelamedu</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Hopes College</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Singanallur</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Ramanathapuram</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Ganapathy</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> PSG Tech</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Avinashi Road</li>
+          </ul>
+        </div>
+        <!-- West -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 border-t-4 border-t-green-500">
+          <h3 class="font-bold text-green-600 mb-4 flex items-center gap-2 text-sm"><i class="fas fa-location-dot"></i> West Coimbatore</h3>
+          <ul class="space-y-3 text-xs font-medium text-gray-700">
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Vadavalli</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Veerakeralam</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Thondamuthur</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Bharathiyar University</li>
+          </ul>
+        </div>
+        <!-- Tiruppur -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 border-t-4 border-t-purple-500">
+          <h3 class="font-bold text-purple-600 mb-4 flex items-center gap-2 text-sm"><i class="fas fa-location-dot"></i> Tiruppur Region</h3>
+          <ul class="space-y-3 text-xs font-medium text-gray-700">
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Tiruppur Railway Station</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Pandian Nagar</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Perumanallur</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="bg-gradient-to-r from-orange-500 to-rose-500 rounded-3xl p-10 text-center text-white shadow-lg scroll-animate">
+        <div class="w-12 h-12 mx-auto bg-white rounded-full flex items-center justify-center text-orange-500 font-bold text-xl mb-4">
+          !
+        </div>
+        <h3 class="text-2xl md:text-3xl font-bold mb-4">Not Sure If Your Area Is Covered?</h3>
+        <p class="mb-8 font-medium">Contact our transport coordinator to check route availability for your specific location</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="tel:9865532528" class="bg-white text-orange-600 px-8 py-3 rounded-full font-bold shadow-sm hover:shadow-md transition-all flex items-center gap-2">
+            <i class="fas fa-phone-alt"></i> Call: 98655 32528
+          </a>
+          <a href="#" class="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-full font-bold shadow-sm transition-all flex items-center gap-2">
+            <i class="fas fa-envelope"></i> Send Inquiry
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Features -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Safety Features</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-animate delay-100">
+        <!-- Feature 1 -->
+        <div class="bg-red-50/50 rounded-2xl p-6 border border-red-50">
+          <div class="w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Speed Governor</h3>
+          <p class="text-sm text-gray-500">All buses fitted with speed limiters for safety</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-blue-50/50 rounded-2xl p-6 border border-blue-50">
+          <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-satellite-dish"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">GPS Tracking</h3>
+          <p class="text-sm text-gray-500">Real-time location monitoring system</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-purple-50/50 rounded-2xl p-6 border border-purple-50">
+          <div class="w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-id-card"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">RFID System</h3>
+          <p class="text-sm text-gray-500">Smart cards for secure boarding</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="bg-green-50/50 rounded-2xl p-6 border border-green-50">
+          <div class="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-first-aid"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">First Aid Box</h3>
+          <p class="text-sm text-gray-500">Fully equipped medical kit in every bus</p>
+        </div>
+        <!-- Feature 5 -->
+        <div class="bg-yellow-50/50 rounded-2xl p-6 border border-yellow-50">
+          <div class="w-10 h-10 bg-yellow-600 text-white rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Trained Staff</h3>
+          <p class="text-sm text-gray-500">Caretakers on every bus for student safety</p>
+        </div>
+        <!-- Feature 6 -->
+        <div class="bg-indigo-50/50 rounded-2xl p-6 border border-indigo-50">
+          <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">CCTV Cameras</h3>
+          <p class="text-sm text-gray-500">Video surveillance for complete security</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transport Guidelines -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transport Guidelines</h2>
+        <p class="text-gray-500 font-medium">Important information for all passengers</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 scroll-animate">
+        <!-- General Rules -->
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
+          <h3 class="text-2xl font-bold text-blue-600 mb-6">General Rules</h3>
+          <ul class="space-y-4">
+            <li class="flex gap-4">
+              <i class="fas fa-clock text-blue-500 mt-1"></i>
+              <div>
+                <span class="font-bold text-gray-900">Punctuality:</span> <span class="text-gray-600 text-sm">Students must report 5 minutes before bus arrival</span>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <i class="fas fa-user-check text-blue-500 mt-1"></i>
+              <div>
+                <span class="font-bold text-gray-900">Boarding:</span> <span class="text-gray-600 text-sm">Students must board only at designated stops</span>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <i class="fas fa-calendar-alt text-blue-500 mt-1"></i>
+              <div>
+                <span class="font-bold text-gray-900">Changes:</span> <span class="text-gray-600 text-sm">Route/stop changes require 1 month advance notice</span>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <i class="fas fa-envelope text-blue-500 mt-1"></i>
+              <div>
+                <span class="font-bold text-gray-900">Communication:</span> <span class="text-gray-600 text-sm">All requests via official email only</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- For Students -->
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
+          <h3 class="text-2xl font-bold text-purple-600 mb-6">For Students</h3>
+          <ul class="space-y-4">
+            <li class="flex gap-4">
+              <i class="fas fa-user-graduate text-purple-500 mt-1"></i>
+              <div>
+                <span class="font-bold text-gray-900">Dress Code:</span> <span class="text-gray-600 text-sm">Proper dress code is mandatory</span>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <i class="fas fa-id-badge text-purple-500 mt-1"></i>
+              <div>
+                <span class="font-bold text-gray-900">ID Card:</span> <span class="text-gray-600 text-sm">Institution ID with bus pass required</span>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <i class="fas fa-ban text-purple-500 mt-1"></i>
+              <div>
+                <span class="font-bold text-gray-900">Prohibited:</span> <span class="text-gray-600 text-sm">Eating, drinking, or games in bus</span>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <i class="fas fa-users text-purple-500 mt-1"></i>
+              <div>
+                <span class="font-bold text-gray-900">Behavior:</span> <span class="text-gray-600 text-sm">Maintain discipline; misbehavior may cancel service</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="global-footer"></div>
+  <script src="../components/loader.js"></script>
+
+  <script>
+    // Scroll Animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+    document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
