@@ -2836,6 +2836,50 @@
                         </div>
                     `;
                 }).join('');
+
+                container.innerHTML += `
+                    <div class="portal-card" style="padding-bottom: 12px;">
+                        <div class="portal-header" style="margin-bottom: 12px;">
+                            <div class="portal-icon" style="background:#ecfeff; color:#0891b2;">
+                                <i class="fa-solid fa-certificate" style="font-size: 24px;"></i>
+                            </div>
+                            <div class="portal-info">
+                                <h3 style="font-size:16px;font-weight:700;color:#1f2937;margin-bottom:2px;">Certificate Verification</h3>
+                                <div class="portal-subtitle" style="text-transform: uppercase; font-size: 10px; letter-spacing: 0.5px; font-weight: 700; color: #64748b;">Verify student certificates</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 12px; border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                            <div onclick="window.open('https://snsinstitutions.directverify.in/','_blank')" style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #f8fafc; border-radius: 12px; transition: all 0.2s ease; cursor: pointer;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div style="width: 28px; height: 28px; border-radius: 6px; background: #fef2f2; color: #dc2626; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-certificate" style="font-size: 12px;"></i></div>
+                                    <div style="font-size: 13px; font-weight: 700; color: #1e293b;">SNSCT</div>
+                                </div>
+                                <div style="font-size: 12px; font-weight: 700; color: #dc2626; display: flex; align-items: center; gap: 4px;">Verify Now <span class="material-symbols-rounded" style="font-size: 16px;">arrow_forward</span></div>
+                            </div>
+                            <div onclick="window.open('mailto:office@snsce.ac.in','_blank')" style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #f8fafc; border-radius: 12px; transition: all 0.2s ease; cursor: pointer;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div style="width: 28px; height: 28px; border-radius: 6px; background: #fffbeb; color: #d97706; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-certificate" style="font-size: 12px;"></i></div>
+                                    <div style="font-size: 13px; font-weight: 700; color: #1e293b;">SNSCE</div>
+                                </div>
+                                <div style="font-size: 12px; font-weight: 700; color: #d97706; display: flex; align-items: center; gap: 4px;">Verify Now <span class="material-symbols-rounded" style="font-size: 16px;">arrow_forward</span></div>
+                            </div>
+                            <div onclick="window.open('https://drsnsrcas.directverify.in','_blank')" style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #f8fafc; border-radius: 12px; transition: all 0.2s ease; cursor: pointer;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div style="width: 28px; height: 28px; border-radius: 6px; background: #f0fdf4; color: #16a34a; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-certificate" style="font-size: 12px;"></i></div>
+                                    <div style="font-size: 13px; font-weight: 700; color: #1e293b;">Arts</div>
+                                </div>
+                                <div style="font-size: 12px; font-weight: 700; color: #16a34a; display: flex; align-items: center; gap: 4px;">Verify Now <span class="material-symbols-rounded" style="font-size: 16px;">arrow_forward</span></div>
+                            </div>
+                            <div onclick="window.open('https://www.tnmgrmu.ac.in/index.php/apply-online.html','_blank')" style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #f8fafc; border-radius: 12px; transition: all 0.2s ease; cursor: pointer;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div style="width: 28px; height: 28px; border-radius: 6px; background: #ecfeff; color: #0891b2; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-certificate" style="font-size: 12px;"></i></div>
+                                    <div style="font-size: 13px; font-weight: 700; color: #1e293b;">Paramedical</div>
+                                </div>
+                                <div style="font-size: 12px; font-weight: 700; color: #0891b2; display: flex; align-items: center; gap: 4px;">Verify Now <span class="material-symbols-rounded" style="font-size: 16px;">arrow_forward</span></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
             }
         }
 
