@@ -1,0 +1,18 @@
+---
+description: Keep Events & Celebrations cards ordered and capped at four
+globs: SNS-Groups/index.html
+alwaysApply: false
+---
+
+# Events & Celebrations cards
+
+Show **exactly 4** event containers in `#events`.
+
+Order:
+1. **Upcoming first**, then **Completed last**.
+2. Upcoming: sort by date **ascending** (soonest first).
+3. Completed: sort by date **descending** (most recently completed first).
+
+Example: Upcoming 27 Sep, Upcoming 29 Sep, Completed 30 Aug, Completed 22 Aug.
+
+When an event finishes, switch its badge/button to Completed, drop register CTAs, and re-sort the four cards. Do not leave upcoming cards after completed ones.
