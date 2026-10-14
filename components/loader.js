@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Adjust the fetch path based on the base path
-            const response = await fetch(`${basePath}${componentPath}`);
+            const response = await fetch(`${basePath}${componentPath}`, { cache: 'no-cache' });
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
