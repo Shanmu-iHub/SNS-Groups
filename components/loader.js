@@ -1,6 +1,18 @@
 // components/loader.js
 
+function initTopBar() {
+    if (document.getElementById('topBar')) return;
+
+    const bar = document.createElement('div');
+    bar.id = 'topBar';
+    bar.setAttribute('aria-hidden', 'true');
+    bar.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:3px;z-index:9999;pointer-events:none;background:linear-gradient(90deg,#ec4899 0%,#d946ef 50%,#7c3aed 100%);';
+    document.body.appendChild(bar);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    initTopBar();
+
     // 1. Determine BASE_PATH for GitHub pages or local development
     // If the URL contains '/SNS-Groups/', then we are on GitHub Pages or a subdirectory path.
     const basePath = window.location.pathname.includes('/SNS-Groups') ? '/SNS-Groups' : '';

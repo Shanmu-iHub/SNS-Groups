@@ -1911,11 +1911,10 @@
          ================================================================ -->
   <div id="desktop-view">
 
-    <!-- Announcement Banner - Agentic AI Bootcamp -->
     <div id="global-header"></div>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero-gradient min-h-screen flex items-center pt-[150px]">
+    <section id="hero" class="hero-gradient min-h-screen flex items-center pt-[118px]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div class="text-white">
@@ -5301,40 +5300,6 @@
 
         </div>
 
-        <!-- Featured: Agentic AI Bootcamp -->
-        <div class="mt-12 scroll-animate">
-          <a href="https://av.snsgroups.com" target="_blank"
-            class="block bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 rounded-2xl p-8 text-white relative overflow-hidden group">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-            <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-2xl -ml-24 -mb-24">
-            </div>
-            <div class="relative flex flex-col md:flex-row items-center gap-6">
-              <div class="flex-shrink-0">
-                <div class="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                  <i class="fas fa-robot text-4xl"></i>
-                </div>
-              </div>
-              <div class="flex-1 text-center md:text-left">
-                <div
-                  class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 rounded-full text-xs font-semibold mb-3">
-                  <span class="animate-pulse w-2 h-2 bg-green-400 rounded-full"></span>
-                  UPCOMING EVENT
-                </div>
-                <h3 class="text-2xl md:text-3xl font-bold mb-2"
-                  style="color: #fbbf24; font-weight: 700; max-width: 100%;">Agentic AI Bootcamp</h3>
-                <p class="text-white/80 text-lg mb-4">Master the future of AI - Build autonomous agents,
-                  GenAI
-                  applications & more!</p>
-              </div>
-              <div class="flex-shrink-0">
-                <div
-                  class="px-6 py-3 bg-white text-purple-700 rounded-xl font-bold group-hover:scale-105 transition-transform shadow-lg">
-                  Register <i class="fas fa-arrow-right ml-2"></i>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
       </div>
     </section>
 
@@ -5669,7 +5634,7 @@
 
     <!-- Footer -->
     <div id="global-footer"></div>
-    <script src="./components/loader.js"></script>
+    <script src="./components/loader.js?v=4"></script>
 
 
 
@@ -5727,32 +5692,6 @@
               <button class="btn btn-outline" onclick="window.open('https://iipc.snsgroups.com/', '_blank')"><span
                   class="material-symbols-rounded">trending_up</span>Placements</button>
             </div>
-          </div>
-        </section>
-        <section class="hot-event-banner">
-          <div class="event-decoration event-decoration-1"></div>
-          <div class="event-decoration event-decoration-2"></div>
-          <div class="event-content">
-            <div class="event-badges">
-              <div class="hot-badge"><span class="material-symbols-rounded">local_fire_department</span>HOT
-                EVENT</div>
-              <div class="date-badge"><span class="material-symbols-rounded">calendar_today</span>FEB 15</div>
-            </div>
-            <div class="event-header">
-              <span class="material-symbols-rounded event-icon">smart_toy</span>
-              <h3 style="font-size:22px;font-weight:800;color:#fff;">Agentic AI Bootcamp</h3>
-            </div>
-            <p class="event-tagline">Master GenAI & Build Autonomous Agents</p>
-            <p class="event-description">Join our intensive bootcamp to learn about AI agents, GenAI
-              applications, and the future of autonomous systems.</p>
-            <div class="event-tags">
-              <div class="event-tag"><span class="material-symbols-rounded">verified</span>Certification</div>
-              <div class="event-tag"><span class="material-symbols-rounded">science</span>Hands-on</div>
-              <div class="event-tag"><span class="material-symbols-rounded">people</span>Industry Mentors
-              </div>
-            </div>
-            <button class="btn btn-event" onclick="window.open('https://av.snsgroups.com/','_blank')"><span
-                class="material-symbols-rounded">rocket_launch</span>Register Now</button>
           </div>
         </section>
         <section class="stats-section">
@@ -6750,10 +6689,10 @@
       icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
     }
 
-    // Announcement Banner
     function closeBanner() {
       const banner = document.getElementById('announcementBanner');
       const nav = document.getElementById('mainNav');
+      if (!banner || !nav) return;
       banner.style.transform = 'translateY(-100%)';
       banner.style.opacity = '0';
       setTimeout(() => {
@@ -8440,9 +8379,6 @@
           <div>
             <h3 class="font-bold mb-4" style="color: #10b981; font-weight: 700; max-width: 100%;">Ecosystem</h3>
             <ul class="space-y-2 text-gray-400 text-sm">
-              <li><a href="https://av.snsgroups.com" target="_blank"
-                  class="hover:text-white transition-colors text-amber-400"><i class="fas fa-robot mr-1"></i>Agentic AI
-                  Bootcamp</a></li>
               <li><a href="https://snsihub.ai" target="_blank" class="hover:text-white transition-colors">SNS
                   iHub</a>
               </li>
@@ -8581,8 +8517,10 @@
             if (target) target.style.display = 'block';
           }
           function closeBanner() {
-            document.getElementById('announcementBanner').style.display = 'none';
-            document.getElementById('mainNav').style.top = '0';
+            const banner = document.getElementById('announcementBanner');
+            const nav = document.getElementById('mainNav');
+            if (banner) banner.style.display = 'none';
+            if (nav) nav.style.top = '0';
           }
         </script>
 </body>
