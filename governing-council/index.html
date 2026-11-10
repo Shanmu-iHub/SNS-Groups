@@ -34,9 +34,9 @@
     <section class="py-12 md:py-16">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="tab-scroll mb-8" role="tablist" aria-label="Filter council members by institution">
-          <button id="tab-engineering" class="tab-btn active rounded-full border border-orange-100 bg-white px-5 py-3 text-sm font-bold text-slate-700 transition" role="tab" aria-selected="true" aria-controls="panel-engineering" data-tab="engineering">Engineering &amp; Technology <span class="ml-2 rounded-full bg-black/10 px-2 py-0.5 text-xs">6</span></button>
-          <button id="tab-arts" class="tab-btn rounded-full border border-orange-100 bg-white px-5 py-3 text-sm font-bold text-slate-700 transition" role="tab" aria-selected="false" aria-controls="panel-arts" data-tab="arts">Arts &amp; Science <span class="ml-2 rounded-full bg-slate-100 px-2 py-0.5 text-xs">4</span></button>
-          <button id="tab-shared" class="tab-btn rounded-full border border-orange-100 bg-white px-5 py-3 text-sm font-bold text-slate-700 transition" role="tab" aria-selected="false" aria-controls="panel-shared" data-tab="shared">Both Institutions <span class="ml-2 rounded-full bg-slate-100 px-2 py-0.5 text-xs">2</span></button>
+          <button id="tab-engineering" class="tab-btn active rounded-full border border-orange-100 bg-white px-5 py-3 text-sm font-bold text-slate-700 transition" role="tab" aria-selected="true" aria-controls="panel-engineering" data-tab="engineering">Engineering &amp; Technology <span class="tab-count ml-2 rounded-full bg-black/10 px-2 py-0.5 text-xs">6</span></button>
+          <button id="tab-arts" class="tab-btn rounded-full border border-orange-100 bg-white px-5 py-3 text-sm font-bold text-slate-700 transition" role="tab" aria-selected="false" aria-controls="panel-arts" data-tab="arts">Arts &amp; Science <span class="tab-count ml-2 rounded-full bg-slate-100 px-2 py-0.5 text-xs">4</span></button>
+          <button id="tab-shared" class="tab-btn rounded-full border border-orange-100 bg-white px-5 py-3 text-sm font-bold text-slate-700 transition" role="tab" aria-selected="false" aria-controls="panel-shared" data-tab="shared">Both Institutions <span class="tab-count ml-2 rounded-full bg-slate-100 px-2 py-0.5 text-xs">2</span></button>
         </div>
         <div id="panel-engineering" role="tabpanel" aria-labelledby="tab-engineering" class="council-panel">
           <div class="mb-5 flex items-end justify-between gap-4"><div><p class="text-xs font-bold uppercase tracking-[.16em] text-orange-600">SNS College of Technology</p><h2 class="mt-1 text-2xl font-extrabold text-slate-900">Engineering &amp; Technology</h2></div><span class="hidden text-sm text-slate-500 sm:inline">6 external members</span></div>
@@ -76,7 +76,7 @@
     function activateTab(name,updateHash=true){
       const target=document.querySelector(`.tab-btn[data-tab="${name}"]`);
       if(!target)return;
-      tabs.forEach(btn=>{const active=btn===target;btn.classList.toggle('active',active);btn.setAttribute('aria-selected',String(active));btn.setAttribute('tabindex',active?'0':'-1')});
+      tabs.forEach(btn=>{const active=btn===target;btn.classList.toggle('active',active);btn.setAttribute('aria-selected',String(active));btn.setAttribute('tabindex',active?'0':'-1');const count=btn.querySelector('.tab-count');if(count){count.classList.toggle('bg-black/10',active);count.classList.toggle('bg-slate-100',!active)}});
       panels.forEach(panel=>panel.classList.toggle('hidden',panel.id!=='panel-'+name));
       if(updateHash)history.replaceState(null,'','#/'+name);
     }
